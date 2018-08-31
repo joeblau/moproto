@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		E669ED92213A014E00710F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669ED91213A014E00710F5D /* AppDelegate.swift */; };
 		E669ED94213A014E00710F5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669ED93213A014E00710F5D /* ViewController.swift */; };
-		E669ED97213A014E00710F5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E669ED95213A014E00710F5D /* Main.storyboard */; };
 		E669ED99213A014E00710F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E669ED98213A014E00710F5D /* Assets.xcassets */; };
 		E669ED9C213A014E00710F5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E669ED9A213A014E00710F5D /* LaunchScreen.storyboard */; };
+		E669EDA5213A058000710F5D /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669EDA4213A058000710F5D /* AppWindow.swift */; };
+		E669EDA8213A084900710F5D /* HUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669EDA7213A084900710F5D /* HUDViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E669ED8E213A014E00710F5D /* Moproto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moproto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E669ED91213A014E00710F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E669ED93213A014E00710F5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E669ED96213A014E00710F5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E669ED98213A014E00710F5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E669ED9B213A014E00710F5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E669ED9D213A014E00710F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E669EDA4213A058000710F5D /* AppWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindow.swift; sourceTree = "<group>"; };
+		E669EDA7213A084900710F5D /* HUDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		E669ED90213A014E00710F5D /* Moproto */ = {
 			isa = PBXGroup;
 			children = (
+				E669EDA6213A083A00710F5D /* HUD */,
+				E669EDA3213A04D400710F5D /* New Group */,
 				E669ED91213A014E00710F5D /* AppDelegate.swift */,
 				E669ED93213A014E00710F5D /* ViewController.swift */,
-				E669ED95213A014E00710F5D /* Main.storyboard */,
 				E669ED98213A014E00710F5D /* Assets.xcassets */,
 				E669ED9A213A014E00710F5D /* LaunchScreen.storyboard */,
 				E669ED9D213A014E00710F5D /* Info.plist */,
 			);
 			path = Moproto;
+			sourceTree = "<group>";
+		};
+		E669EDA3213A04D400710F5D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				E669EDA4213A058000710F5D /* AppWindow.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		E669EDA6213A083A00710F5D /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				E669EDA7213A084900710F5D /* HUDViewController.swift */,
+			);
+			path = HUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +143,6 @@
 			files = (
 				E669ED9C213A014E00710F5D /* LaunchScreen.storyboard in Resources */,
 				E669ED99213A014E00710F5D /* Assets.xcassets in Resources */,
-				E669ED97213A014E00710F5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E669ED94213A014E00710F5D /* ViewController.swift in Sources */,
+				E669EDA5213A058000710F5D /* AppWindow.swift in Sources */,
+				E669EDA8213A084900710F5D /* HUDViewController.swift in Sources */,
 				E669ED92213A014E00710F5D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E669ED95213A014E00710F5D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E669ED96213A014E00710F5D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E669ED9A213A014E00710F5D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,7 +302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.joeblau.Moproto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,7 +320,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.joeblau.Moproto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
