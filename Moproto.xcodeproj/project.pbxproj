@@ -14,6 +14,13 @@
 		E669EDA5213A058000710F5D /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669EDA4213A058000710F5D /* AppWindow.swift */; };
 		E669EDA8213A084900710F5D /* HUDObjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669EDA7213A084900710F5D /* HUDObjectsViewController.swift */; };
 		E669EDAC213A0FC000710F5D /* HUDObjectsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669EDAB213A0FC000710F5D /* HUDObjectsDataSource.swift */; };
+		E6C379DF213A2D2B0039D774 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379DE213A2D2B0039D774 /* Object.swift */; };
+		E6C379E2213A2D910039D774 /* ObjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379E1213A2D910039D774 /* ObjectFactory.swift */; };
+		E6C379E4213A30460039D774 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6C379E3213A30460039D774 /* Localizable.strings */; };
+		E6C379E7213A30910039D774 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379E6213A30910039D774 /* String+Extensions.swift */; };
+		E6C379E9213AB2FE0039D774 /* ViewControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379E8213AB2FE0039D774 /* ViewControllerObject.swift */; };
+		E6C379EB213AB3B70039D774 /* NavigationControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379EA213AB3B70039D774 /* NavigationControllerObject.swift */; };
+		E6C379ED213AB40E0039D774 /* TableViewControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379EC213AB40E0039D774 /* TableViewControllerObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		E669EDA4213A058000710F5D /* AppWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindow.swift; sourceTree = "<group>"; };
 		E669EDA7213A084900710F5D /* HUDObjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDObjectsViewController.swift; sourceTree = "<group>"; };
 		E669EDAB213A0FC000710F5D /* HUDObjectsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDObjectsDataSource.swift; sourceTree = "<group>"; };
+		E6C379DE213A2D2B0039D774 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		E6C379E1213A2D910039D774 /* ObjectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectFactory.swift; sourceTree = "<group>"; };
+		E6C379E3213A30460039D774 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E6C379E6213A30910039D774 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		E6C379E8213AB2FE0039D774 /* ViewControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerObject.swift; sourceTree = "<group>"; };
+		E6C379EA213AB3B70039D774 /* NavigationControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerObject.swift; sourceTree = "<group>"; };
+		E6C379EC213AB40E0039D774 /* TableViewControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +56,7 @@
 		E669ED85213A014D00710F5D = {
 			isa = PBXGroup;
 			children = (
+				E6C379E3213A30460039D774 /* Localizable.strings */,
 				E669ED90213A014E00710F5D /* Moproto */,
 				E669ED8F213A014E00710F5D /* Products */,
 			);
@@ -58,8 +73,10 @@
 		E669ED90213A014E00710F5D /* Moproto */ = {
 			isa = PBXGroup;
 			children = (
+				E6C379E5213A30800039D774 /* Extensions */,
+				E6C379DD213A2D1D0039D774 /* Objects */,
 				E669EDA6213A083A00710F5D /* HUD */,
-				E669EDA3213A04D400710F5D /* New Group */,
+				E669EDA3213A04D400710F5D /* Root */,
 				E669ED91213A014E00710F5D /* AppDelegate.swift */,
 				E669ED93213A014E00710F5D /* ViewController.swift */,
 				E669ED98213A014E00710F5D /* Assets.xcassets */,
@@ -69,12 +86,12 @@
 			path = Moproto;
 			sourceTree = "<group>";
 		};
-		E669EDA3213A04D400710F5D /* New Group */ = {
+		E669EDA3213A04D400710F5D /* Root */ = {
 			isa = PBXGroup;
 			children = (
 				E669EDA4213A058000710F5D /* AppWindow.swift */,
 			);
-			path = "New Group";
+			path = Root;
 			sourceTree = "<group>";
 		};
 		E669EDA6213A083A00710F5D /* HUD */ = {
@@ -84,6 +101,26 @@
 				E669EDAB213A0FC000710F5D /* HUDObjectsDataSource.swift */,
 			);
 			path = HUD;
+			sourceTree = "<group>";
+		};
+		E6C379DD213A2D1D0039D774 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				E6C379DE213A2D2B0039D774 /* Object.swift */,
+				E6C379E1213A2D910039D774 /* ObjectFactory.swift */,
+				E6C379E8213AB2FE0039D774 /* ViewControllerObject.swift */,
+				E6C379EA213AB3B70039D774 /* NavigationControllerObject.swift */,
+				E6C379EC213AB40E0039D774 /* TableViewControllerObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		E6C379E5213A30800039D774 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E6C379E6213A30910039D774 /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E669ED9C213A014E00710F5D /* LaunchScreen.storyboard in Resources */,
+				E6C379E4213A30460039D774 /* Localizable.strings in Resources */,
 				E669ED99213A014E00710F5D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,9 +195,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E669ED94213A014E00710F5D /* ViewController.swift in Sources */,
+				E6C379E9213AB2FE0039D774 /* ViewControllerObject.swift in Sources */,
 				E669EDAC213A0FC000710F5D /* HUDObjectsDataSource.swift in Sources */,
+				E6C379E2213A2D910039D774 /* ObjectFactory.swift in Sources */,
 				E669EDA5213A058000710F5D /* AppWindow.swift in Sources */,
+				E6C379E7213A30910039D774 /* String+Extensions.swift in Sources */,
+				E6C379EB213AB3B70039D774 /* NavigationControllerObject.swift in Sources */,
 				E669EDA8213A084900710F5D /* HUDObjectsViewController.swift in Sources */,
+				E6C379ED213AB40E0039D774 /* TableViewControllerObject.swift in Sources */,
+				E6C379DF213A2D2B0039D774 /* Object.swift in Sources */,
 				E669ED92213A014E00710F5D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

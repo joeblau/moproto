@@ -40,7 +40,16 @@ class AppWindow: UIWindow {
 }
 
 extension AppWindow: HUDObjectsActionable {
-    func dismiss() {
+    func dismiss(_ object: Object?) {
+
+        if let object = object {
+            let vc = UIViewController()
+            vc.view.backgroundColor = .blue
+            vc.title = "ChangeMe"
+
+            rootViewController = UINavigationController(rootViewController: vc)
+        }
+
         visualizationWindow.isHidden = true
     }
 }

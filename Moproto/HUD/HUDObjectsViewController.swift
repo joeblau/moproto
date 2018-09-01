@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HUDObjectsActionable {
-    func dismiss()
+    func dismiss(_ object: Object?)
 }
 
 class HUDObjectsViewController: UITableViewController {
@@ -22,6 +22,9 @@ class HUDObjectsViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
         tableView.delegate = self
         tableView.dataSource = dataSource
+
+
+        navigationItem.leftBarButtonItems = [UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel, target: self, action: #selector(cancel))]
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -34,11 +37,16 @@ class HUDObjectsViewController: UITableViewController {
         view.backgroundColor = UIColor.red.withAlphaComponent(0.4)
     }
 
+    @objc func cancel() {
+        actionable?.dismiss(nil)
+    }
+
 
 }
 
 extension HUDObjectsViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        actionable?.dismiss()
+        let object = dataSource.objects[indexPath.row]
+        actionable?.dismiss(object)
     }
 }
