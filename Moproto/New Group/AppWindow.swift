@@ -11,25 +11,21 @@ import UIKit
 
 class AppWindow: UIWindow {
 
-    fileprivate var visualizationWindow: UIWindow = {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.isUserInteractionEnabled = false
-        window.windowLevel = .statusBar
-        window.rootViewController = HUDViewController()
-        return window
-    }()
+    fileprivate let hudObjects = HUDObjectsViewController()
+    fileprivate let visualizationWindow = UIWindow(frame: UIScreen.main.bounds)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-
+        hudObjects.actionable = self
+        visualizationWindow.windowLevel = .statusBar
+        visualizationWindow.rootViewController = UINavigationController(rootViewController: hudObjects)
+        
         let doubleTap = UITapGestureRecognizer(target: self, action: #selector(dispalyHud))
         doubleTap.numberOfTapsRequired = 2
         doubleTap.numberOfTouchesRequired = 1
         
         addGestureRecognizer(doubleTap)
         rootViewController = ViewController()
-
-//
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -40,4 +36,11 @@ class AppWindow: UIWindow {
         visualizationWindow.makeKeyAndVisible()
     }
 
+
+}
+
+extension AppWindow: HUDObjectsActionable {
+    func dismiss() {
+        visualizationWindow.isHidden = true
+    }
 }

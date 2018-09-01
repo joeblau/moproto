@@ -12,7 +12,8 @@
 		E669ED99213A014E00710F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E669ED98213A014E00710F5D /* Assets.xcassets */; };
 		E669ED9C213A014E00710F5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E669ED9A213A014E00710F5D /* LaunchScreen.storyboard */; };
 		E669EDA5213A058000710F5D /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669EDA4213A058000710F5D /* AppWindow.swift */; };
-		E669EDA8213A084900710F5D /* HUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669EDA7213A084900710F5D /* HUDViewController.swift */; };
+		E669EDA8213A084900710F5D /* HUDObjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669EDA7213A084900710F5D /* HUDObjectsViewController.swift */; };
+		E669EDAC213A0FC000710F5D /* HUDObjectsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669EDAB213A0FC000710F5D /* HUDObjectsDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +24,8 @@
 		E669ED9B213A014E00710F5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E669ED9D213A014E00710F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E669EDA4213A058000710F5D /* AppWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindow.swift; sourceTree = "<group>"; };
-		E669EDA7213A084900710F5D /* HUDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDViewController.swift; sourceTree = "<group>"; };
+		E669EDA7213A084900710F5D /* HUDObjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDObjectsViewController.swift; sourceTree = "<group>"; };
+		E669EDAB213A0FC000710F5D /* HUDObjectsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDObjectsDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,8 @@
 		E669EDA6213A083A00710F5D /* HUD */ = {
 			isa = PBXGroup;
 			children = (
-				E669EDA7213A084900710F5D /* HUDViewController.swift */,
+				E669EDA7213A084900710F5D /* HUDObjectsViewController.swift */,
+				E669EDAB213A0FC000710F5D /* HUDObjectsDataSource.swift */,
 			);
 			path = HUD;
 			sourceTree = "<group>";
@@ -154,8 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E669ED94213A014E00710F5D /* ViewController.swift in Sources */,
+				E669EDAC213A0FC000710F5D /* HUDObjectsDataSource.swift in Sources */,
 				E669EDA5213A058000710F5D /* AppWindow.swift in Sources */,
-				E669EDA8213A084900710F5D /* HUDViewController.swift in Sources */,
+				E669EDA8213A084900710F5D /* HUDObjectsViewController.swift in Sources */,
 				E669ED92213A014E00710F5D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
