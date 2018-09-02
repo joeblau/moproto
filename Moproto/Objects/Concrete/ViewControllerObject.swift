@@ -13,6 +13,6 @@ struct ViewControllerObject: Object {
     var title: String = "view_controller_title".localize
     var description: String = "view_controller_description".localize
     var category: ObjectCategory = .viewController
-    var objectType: MoprotoObjectType = MoprotoObjectType(name: String(describing: UIViewController.self))
+    var type: MoprotoObjectType = MoprotoObjectType(name: String(describing: UIViewController.self))
 }
 

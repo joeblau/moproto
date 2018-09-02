@@ -13,5 +13,5 @@ struct ContainerViewObject: Object {
     var title: String = "container_view_title".localize
     var description: String = "container_view_description".localize
     var category: ObjectCategory = .view
-    var objectType: MoprotoObjectType = MoprotoObjectType(name: "UIContainerView")
+    var type: MoprotoObjectType = MoprotoObjectType(name: "UIContainerView")
 }

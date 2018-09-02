@@ -13,5 +13,5 @@ class ViewObject: Object {
     var title: String = "view_title".localize
     var description: String = "view_description".localize
     var category: ObjectCategory = .view
-    var objectType: MoprotoObjectType = MoprotoObjectType(name: String(describing: UIView.self))
+    var type: MoprotoObjectType = MoprotoObjectType(name: String(describing: UIView.self))
 }

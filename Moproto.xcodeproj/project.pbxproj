@@ -125,15 +125,10 @@
 		E6C379DD213A2D1D0039D774 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				E6C37A05213BF3180039D774 /* Concrete */,
 				E6C37A01213B810D0039D774 /* MoprotoObjectType.swift */,
 				E6C379DE213A2D2B0039D774 /* Object.swift */,
 				E6C379E1213A2D910039D774 /* ObjectFactory.swift */,
-				E6C379E8213AB2FE0039D774 /* ViewControllerObject.swift */,
-				E6C379EA213AB3B70039D774 /* NavigationControllerObject.swift */,
-				E6C379EC213AB40E0039D774 /* TableViewControllerObject.swift */,
-				E6C379F4213B66D70039D774 /* ButtonObject.swift */,
-				E6C379EE213AD9790039D774 /* ViewObject.swift */,
-				E6C379F0213ADA770039D774 /* ContainerViewObject.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -144,6 +139,19 @@
 				E6C379E6213A30910039D774 /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E6C37A05213BF3180039D774 /* Concrete */ = {
+			isa = PBXGroup;
+			children = (
+				E6C379E8213AB2FE0039D774 /* ViewControllerObject.swift */,
+				E6C379EA213AB3B70039D774 /* NavigationControllerObject.swift */,
+				E6C379EC213AB40E0039D774 /* TableViewControllerObject.swift */,
+				E6C379F4213B66D70039D774 /* ButtonObject.swift */,
+				E6C379EE213AD9790039D774 /* ViewObject.swift */,
+				E6C379F0213ADA770039D774 /* ContainerViewObject.swift */,
+			);
+			path = Concrete;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

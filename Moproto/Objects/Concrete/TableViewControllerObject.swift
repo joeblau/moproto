@@ -13,5 +13,5 @@ struct TableViewControllerObject: Object {
     var title: String = "table_view_controller_title".localize
     var description: String = "table_view_controller_description".localize
     var category: ObjectCategory = .viewController
-    var objectType: MoprotoObjectType = MoprotoObjectType(name: String(describing: UITableViewController.self))
+    var type: MoprotoObjectType = MoprotoObjectType(name: String(describing: UITableViewController.self))
 }

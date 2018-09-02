@@ -22,12 +22,12 @@ protocol Object {
     var title: String { get }
     var description: String { get }
     var category: ObjectCategory { get }
-    var objectType: MoprotoObjectType { get }
+    var type: MoprotoObjectType { get }
 }
 
 extension Object {
     var dragItem: UIDragItem {
-        let itemProvider = NSItemProvider(object: self.objectType)
+        let itemProvider = NSItemProvider(object: self.type)
         return UIDragItem(itemProvider: itemProvider)
     }
 }

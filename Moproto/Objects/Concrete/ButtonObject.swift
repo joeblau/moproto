@@ -13,5 +13,5 @@ struct ButtonObject: Object {
     var title: String = "button_title".localize
     var description: String = "button_description".localize
     var category: ObjectCategory = .control
-    var objectType: MoprotoObjectType = MoprotoObjectType(name: String(describing: UIButton.self))
+    var type: MoprotoObjectType = MoprotoObjectType(name: String(describing: UIButton.self))
 }

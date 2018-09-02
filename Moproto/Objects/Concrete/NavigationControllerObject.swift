@@ -13,5 +13,5 @@ struct NavigationControllerObject: Object {
     var title: String = "navigation_controller_title".localize
     var description: String = "navigation_controller_description".localize
     var category: ObjectCategory = .viewController
-    var objectType: MoprotoObjectType = MoprotoObjectType(name: String(describing: UINavigationController.self))
+    var type: MoprotoObjectType = MoprotoObjectType(name: String(describing: UINavigationController.self))
 }
