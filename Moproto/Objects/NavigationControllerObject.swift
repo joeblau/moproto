@@ -10,7 +10,7 @@ import UIKit
 
 struct NavigationControllerObject: Object {
     var image: UIImage = #imageLiteral(resourceName: "UINavigationController")
-    var title: String = "navagation_controller_title".localize
+    var title: String = "navigation_controller_title".localize
     var description: String = "navigation_controller_description".localize
     var type: ObjectType = .viewController
 }

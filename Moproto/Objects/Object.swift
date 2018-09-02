@@ -13,6 +13,7 @@ enum ObjectType {
     case widget
     case gesture
     case view
+    case control
 }
 
 protocol Object {

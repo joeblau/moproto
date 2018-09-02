@@ -34,7 +34,7 @@ class HUDObjectsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Objects"
-        view.backgroundColor = UIColor.red.withAlphaComponent(0.4)
+        view.backgroundColor = UIColor(white: 1.0, alpha: 0.94)
     }
 
     @objc func cancel() {

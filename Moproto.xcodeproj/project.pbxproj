@@ -21,6 +21,9 @@
 		E6C379E9213AB2FE0039D774 /* ViewControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379E8213AB2FE0039D774 /* ViewControllerObject.swift */; };
 		E6C379EB213AB3B70039D774 /* NavigationControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379EA213AB3B70039D774 /* NavigationControllerObject.swift */; };
 		E6C379ED213AB40E0039D774 /* TableViewControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379EC213AB40E0039D774 /* TableViewControllerObject.swift */; };
+		E6C379EF213AD9790039D774 /* ViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379EE213AD9790039D774 /* ViewObject.swift */; };
+		E6C379F1213ADA770039D774 /* ContainerViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379F0213ADA770039D774 /* ContainerViewObject.swift */; };
+		E6C379F5213B66D70039D774 /* ButtonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379F4213B66D70039D774 /* ButtonObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		E6C379E8213AB2FE0039D774 /* ViewControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerObject.swift; sourceTree = "<group>"; };
 		E6C379EA213AB3B70039D774 /* NavigationControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerObject.swift; sourceTree = "<group>"; };
 		E6C379EC213AB40E0039D774 /* TableViewControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerObject.swift; sourceTree = "<group>"; };
+		E6C379EE213AD9790039D774 /* ViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewObject.swift; sourceTree = "<group>"; };
+		E6C379F0213ADA770039D774 /* ContainerViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewObject.swift; sourceTree = "<group>"; };
+		E6C379F4213B66D70039D774 /* ButtonObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,9 @@
 				E6C379E8213AB2FE0039D774 /* ViewControllerObject.swift */,
 				E6C379EA213AB3B70039D774 /* NavigationControllerObject.swift */,
 				E6C379EC213AB40E0039D774 /* TableViewControllerObject.swift */,
+				E6C379F4213B66D70039D774 /* ButtonObject.swift */,
+				E6C379EE213AD9790039D774 /* ViewObject.swift */,
+				E6C379F0213ADA770039D774 /* ContainerViewObject.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -199,6 +208,9 @@
 				E669EDAC213A0FC000710F5D /* HUDObjectsDataSource.swift in Sources */,
 				E6C379E2213A2D910039D774 /* ObjectFactory.swift in Sources */,
 				E669EDA5213A058000710F5D /* AppWindow.swift in Sources */,
+				E6C379F1213ADA770039D774 /* ContainerViewObject.swift in Sources */,
+				E6C379F5213B66D70039D774 /* ButtonObject.swift in Sources */,
+				E6C379EF213AD9790039D774 /* ViewObject.swift in Sources */,
 				E6C379E7213A30910039D774 /* String+Extensions.swift in Sources */,
 				E6C379EB213AB3B70039D774 /* NavigationControllerObject.swift in Sources */,
 				E669EDA8213A084900710F5D /* HUDObjectsViewController.swift in Sources */,

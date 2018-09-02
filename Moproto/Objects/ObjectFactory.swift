@@ -12,7 +12,10 @@ class ObjectFactory {
     static func build() -> [Object] {
         return [ViewControllerObject(),
                 NavigationControllerObject(),
-                TableViewControllerObject()
+                TableViewControllerObject(),
+                ButtonObject(),
+                ViewObject(),
+                ContainerViewObject()
         ]
     }
 }

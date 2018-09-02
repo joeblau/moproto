@@ -33,7 +33,7 @@
 "segmented_control_title" = "Segmented Control";
 "segmented_control_description" = "Display multiple segments, each of which functions as a discrete button.";
 "text_field_title" = "Text Field";
-"text_field_description" = "Displays editable text and sends an action message to the target object when Return is tapped.;
+"text_field_description" = "Displays editable text and sends an action message to the target object when Return is tapped.";
 "slider_title" = "Slider";
 "slider_description" = "Displays a continuous range of values and allows the selection of a single value.";
 "switch_title" = "Switch";
@@ -130,5 +130,3 @@
 "view_description" = "Represents a rectangular region in which it draws and receives events.";
 "container_view_title" = "Container View";
 "container_view_description" = "Defines a region of a view controller that can include a child view controller";
-
-
