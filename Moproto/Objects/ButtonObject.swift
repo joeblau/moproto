@@ -12,5 +12,6 @@ struct ButtonObject: Object {
     var image: UIImage = #imageLiteral(resourceName: "UIButton")
     var title: String = "button_title".localize
     var description: String = "button_description".localize
-    var type: ObjectType = .control
+    var category: ObjectCategory = .control
+    var objectType: MoprotoObjectType = MoprotoObjectType(name: String(describing: UIButton.self))
 }

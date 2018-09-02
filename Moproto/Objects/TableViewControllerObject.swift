@@ -12,5 +12,6 @@ struct TableViewControllerObject: Object {
     var image: UIImage = #imageLiteral(resourceName: "UITableViewController")
     var title: String = "table_view_controller_title".localize
     var description: String = "table_view_controller_description".localize
-    var type: ObjectType = .viewController
+    var category: ObjectCategory = .viewController
+    var objectType: MoprotoObjectType = MoprotoObjectType(name: String(describing: UITableViewController.self))
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import MobileCoreServices
 
 class AppWindow: UIWindow {
 
@@ -26,6 +26,10 @@ class AppWindow: UIWindow {
         
         addGestureRecognizer(doubleTap)
         rootViewController = ViewController()
+
+        let dropInteraction = UIDropInteraction(delegate: self)
+        addInteraction(dropInteraction)
+        
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -40,16 +44,7 @@ class AppWindow: UIWindow {
 }
 
 extension AppWindow: HUDObjectsActionable {
-    func dismiss(_ object: Object?) {
-
-        if let object = object {
-            let vc = UIViewController()
-            vc.view.backgroundColor = .blue
-            vc.title = "ChangeMe"
-
-            rootViewController = UINavigationController(rootViewController: vc)
-        }
-
+    func dismiss() {
         visualizationWindow.isHidden = true
     }
 }

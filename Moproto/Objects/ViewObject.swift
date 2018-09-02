@@ -12,5 +12,6 @@ class ViewObject: Object {
     var image: UIImage = #imageLiteral(resourceName: "UIView")
     var title: String = "view_title".localize
     var description: String = "view_description".localize
-    var type: ObjectType = .view
+    var category: ObjectCategory = .view
+    var objectType: MoprotoObjectType = MoprotoObjectType(name: String(describing: UIView.self))
 }

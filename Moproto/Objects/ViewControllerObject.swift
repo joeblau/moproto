@@ -12,6 +12,7 @@ struct ViewControllerObject: Object {
     var image: UIImage = #imageLiteral(resourceName: "UIViewController")
     var title: String = "view_controller_title".localize
     var description: String = "view_controller_description".localize
-    var type: ObjectType = .viewController
+    var category: ObjectCategory = .viewController
+    var objectType: MoprotoObjectType = MoprotoObjectType(name: String(describing: UIViewController.self))
 }
 

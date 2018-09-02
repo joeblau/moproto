@@ -12,5 +12,6 @@ struct NavigationControllerObject: Object {
     var image: UIImage = #imageLiteral(resourceName: "UINavigationController")
     var title: String = "navigation_controller_title".localize
     var description: String = "navigation_controller_description".localize
-    var type: ObjectType = .viewController
+    var category: ObjectCategory = .viewController
+    var objectType: MoprotoObjectType = MoprotoObjectType(name: String(describing: UINavigationController.self))
 }

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MobileCoreServices
 
-enum ObjectType {
+enum ObjectCategory {
     case viewController
     case widget
     case gesture
@@ -20,5 +21,13 @@ protocol Object {
     var image: UIImage { get }
     var title: String { get }
     var description: String { get }
-    var type: ObjectType { get }
+    var category: ObjectCategory { get }
+    var objectType: MoprotoObjectType { get }
+}
+
+extension Object {
+    var dragItem: UIDragItem {
+        let itemProvider = NSItemProvider(object: self.objectType)
+        return UIDragItem(itemProvider: itemProvider)
+    }
 }

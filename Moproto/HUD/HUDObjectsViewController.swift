@@ -9,20 +9,21 @@
 import UIKit
 
 protocol HUDObjectsActionable {
-    func dismiss(_ object: Object?)
+    func dismiss()
 }
 
 class HUDObjectsViewController: UITableViewController {
 
-    fileprivate let dataSource = HUDObjectsDataSource()
+    let objects = ObjectFactory.build()
     var actionable: HUDObjectsActionable?
 
     init() {
         super.init(nibName: nil, bundle: nil)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
+        tableView.dragInteractionEnabled = true
         tableView.delegate = self
-        tableView.dataSource = dataSource
-
+        tableView.dataSource = self
+        tableView.dragDelegate = self
 
         navigationItem.leftBarButtonItems = [UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel, target: self, action: #selector(cancel))]
     }
@@ -38,15 +39,6 @@ class HUDObjectsViewController: UITableViewController {
     }
 
     @objc func cancel() {
-        actionable?.dismiss(nil)
-    }
-
-
-}
-
-extension HUDObjectsViewController {
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let object = dataSource.objects[indexPath.row]
-        actionable?.dismiss(object)
+        actionable?.dismiss()
     }
 }

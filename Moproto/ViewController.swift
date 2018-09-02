@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     fileprivate let noProjectLabel = UILabel()
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         noProjectLabel.translatesAutoresizingMaskIntoConstraints = false
         noProjectLabel.text = "Double tap screen to begin"
+
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -35,4 +37,3 @@ class ViewController: UIViewController {
     }
 
 }
-

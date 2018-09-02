@@ -12,5 +12,6 @@ struct ContainerViewObject: Object {
     var image: UIImage = #imageLiteral(resourceName: "UIContainerView")
     var title: String = "container_view_title".localize
     var description: String = "container_view_description".localize
-    var type: ObjectType = .view
+    var category: ObjectCategory = .view
+    var objectType: MoprotoObjectType = MoprotoObjectType(name: "UIContainerView")
 }
