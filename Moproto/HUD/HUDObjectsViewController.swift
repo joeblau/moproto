@@ -41,4 +41,9 @@ class HUDObjectsViewController: UITableViewController {
     @objc func cancel() {
         actionable?.dismiss()
     }
+    
+    override var preferredScreenEdgesDeferringSystemGestures: UIRectEdge {
+        return .bottom
+    }
+    
 }

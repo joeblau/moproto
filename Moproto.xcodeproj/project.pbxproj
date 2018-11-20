@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E607119B21A3879600C3BD2B /* BlankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607119A21A3879600C3BD2B /* BlankViewController.swift */; };
+		E607119B21A3879600C3BD2B /* WhiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607119A21A3879600C3BD2B /* WhiteViewController.swift */; };
 		E6662E37213C1232007AAFDF /* StoryboardReferenceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6662E36213C1232007AAFDF /* StoryboardReferenceObject.swift */; };
 		E669ED92213A014E00710F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669ED91213A014E00710F5D /* AppDelegate.swift */; };
 		E669ED94213A014E00710F5D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669ED93213A014E00710F5D /* InitialViewController.swift */; };
@@ -89,7 +89,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E607119A21A3879600C3BD2B /* BlankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankViewController.swift; sourceTree = "<group>"; };
+		E607119A21A3879600C3BD2B /* WhiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteViewController.swift; sourceTree = "<group>"; };
 		E628F073213BF588008F12E5 /* SearchBarandSearchDisplayControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarandSearchDisplayControllerObject.swift; sourceTree = "<group>"; };
 		E628F074213BF589008F12E5 /* ObjectObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectObject.swift; sourceTree = "<group>"; };
 		E628F075213BF589008F12E5 /* HorizontalStackViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalStackViewObject.swift; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 				E669EDA3213A04D400710F5D /* Root */,
 				E669ED91213A014E00710F5D /* AppDelegate.swift */,
 				E669ED93213A014E00710F5D /* InitialViewController.swift */,
-				E607119A21A3879600C3BD2B /* BlankViewController.swift */,
+				E607119A21A3879600C3BD2B /* WhiteViewController.swift */,
 				E669ED98213A014E00710F5D /* Assets.xcassets */,
 				E669ED9A213A014E00710F5D /* LaunchScreen.storyboard */,
 				E669ED9D213A014E00710F5D /* Info.plist */,
@@ -456,7 +456,7 @@
 				E6C379F9213B6D8F0039D774 /* HUDObjectsViewController+UITableViewDragDelegate.swift in Sources */,
 				E676E26D213BFAA300CA55D2 /* VisualEffectViewwithBlurObject.swift in Sources */,
 				E676E272213BFAA300CA55D2 /* BarButtonItemFixedSpaceObject.swift in Sources */,
-				E607119B21A3879600C3BD2B /* BlankViewController.swift in Sources */,
+				E607119B21A3879600C3BD2B /* WhiteViewController.swift in Sources */,
 				E6C379FB213B6DDF0039D774 /* HUDObjectsViewController+UITableViewDelegate.swift in Sources */,
 				E676E252213BF5B500CA55D2 /* CollectionReusableViewObject.swift in Sources */,
 				E676E260213BF5B500CA55D2 /* GlkitViewObject.swift in Sources */,

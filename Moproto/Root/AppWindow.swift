@@ -12,19 +12,19 @@ import MobileCoreServices
 class AppWindow: UIWindow {
 
     fileprivate let hudObjects = HUDObjectsViewController()
-    fileprivate let visualizationWindow = UIWindow(frame: UIScreen.main.bounds)
+    fileprivate let dashboardWindow = UIWindow(frame: UIScreen.main.bounds)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         hudObjects.actionable = self
-        visualizationWindow.windowLevel = .statusBar
-        visualizationWindow.rootViewController = UINavigationController(rootViewController: hudObjects)
+        dashboardWindow.windowLevel = .statusBar
+        dashboardWindow.rootViewController = UINavigationController(rootViewController: hudObjects)
         
-        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(dispalyHud))
-        doubleTap.numberOfTapsRequired = 2
-        doubleTap.numberOfTouchesRequired = 1
         
-        addGestureRecognizer(doubleTap)
+        let screenEdge = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(dispalyHud))
+        screenEdge.edges = [.bottom]
+        
+        addGestureRecognizer(screenEdge)
         rootViewController = InitialViewController()
 
         let dropInteraction = UIDropInteraction(delegate: self)
@@ -36,12 +36,13 @@ class AppWindow: UIWindow {
     }
 
     @objc func dispalyHud() {
-        visualizationWindow.makeKeyAndVisible()
+        dashboardWindow.makeKeyAndVisible()
     }
+    
 }
 
 extension AppWindow: HUDObjectsActionable {
     func dismiss() {
-        visualizationWindow.isHidden = true
+        dashboardWindow.isHidden = true
     }
 }

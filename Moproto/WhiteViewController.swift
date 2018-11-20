@@ -8,11 +8,14 @@
 
 import UIKit
 
-class BlankViewController: UIViewController {
+class WhiteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
     }
-
+    
+    override var preferredScreenEdgesDeferringSystemGestures: UIRectEdge {
+        return .bottom
+    }
 }

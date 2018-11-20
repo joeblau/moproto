@@ -23,19 +23,18 @@ extension AppWindow: UIDropInteractionDelegate {
 
             switch firstItem.className {
             case "UINavigationController":
-                let vc = UIViewController()
-                vc.view.backgroundColor = .white
+                let vc = WhiteViewController()
                 vc.title = "ChangeMe"
                 self.rootViewController = UINavigationController(rootViewController: vc)
 
             case "UITabBarController":
-                let vc0 = BlankViewController()
+                let vc0 = WhiteViewController()
                 vc0.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.favorites, tag: 0)
-                let vc1 = BlankViewController()
+                let vc1 = WhiteViewController()
                 vc1.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.bookmarks, tag: 1)
-                let vc2 = BlankViewController()
+                let vc2 = WhiteViewController()
                 vc2.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.mostViewed, tag: 2)
-                let vc3 = BlankViewController()
+                let vc3 = WhiteViewController()
                 vc3.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.search, tag: 3)
                 
                 let tbc = UITabBarController()
@@ -43,33 +42,57 @@ extension AppWindow: UIDropInteractionDelegate {
                 tbc.viewControllers = [vc0, vc1, vc2, vc3]
                 
                 self.rootViewController = tbc
-                
+
             case "UIButton":
                 let b = UIButton(type: .system)
                 b.setTitle("Button", for: .normal)
-                b.sizeToFit()
-                self.addControl(control: b, performDrop: session)
+                self.addView(view: b, performDrop: session)
 
             case "UISegmentedControl":
                 let items = ["First", "Second", "Third"]
                 let sc = UISegmentedControl(items: items)
-                sc.sizeToFit()
-                self.addControl(control: sc, performDrop: session)
+                self.addView(view: sc, performDrop: session)
+
+            case "UISlider":
+                let s = UISlider()
+                s.widthAnchor.constraint(equalToConstant: 120).isActive = true
+                self.addView(view: s, performDrop: session)
+            
+            case "UIStepper": self.addView(view: UIStepper(), performDrop: session)
+
+            case "UISwitch": self.addView(view: UISwitch(), performDrop: session)
+                
+            case "UILabel":
+                let l = UILabel()
+                l.text = "Label"
+                self.addView(view: l, performDrop: session)
+                
+            case "UIProgressView":
+                let p = UIProgressView()
+                self.addView(view: p, performDrop: session)
+
                 
             default: print("no op")
             }
         }
     }
     
-    private func addControl(control: UIControl, performDrop session: UIDropSession) {
+    private func addView(view: UIView, performDrop session: UIDropSession) {
+        view.translatesAutoresizingMaskIntoConstraints = false
         if let topView = (self.rootViewController as? UINavigationController)?.topViewController?.view {
-            topView.addSubview(control)
-            control.center = session.location(in: topView)
+            topView.addSubview(view)
+            let center = session.location(in: topView)
+            view.centerYAnchor.constraint(equalTo: topView.topAnchor, constant: center.y).isActive = true
+            view.centerXAnchor.constraint(equalTo: topView.leadingAnchor, constant: center.x).isActive = true
         }
         if let selectedIndex = (self.rootViewController as? UITabBarController)?.selectedIndex,
             let topView = (self.rootViewController as? UITabBarController)?.viewControllers?[selectedIndex].view {
-            topView.addSubview(control)
-            control.center = session.location(in: topView)
+            topView.addSubview(view)
+            let center = session.location(in: topView)
+            view.centerYAnchor.constraint(equalTo: topView.topAnchor, constant: center.y).isActive = true
+            view.centerXAnchor.constraint(equalTo: topView.leadingAnchor, constant: center.x).isActive = true
         }
     }
+    
+    
 }

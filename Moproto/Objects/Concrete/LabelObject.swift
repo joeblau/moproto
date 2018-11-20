@@ -1,7 +1,7 @@
 import UIKit
 
 struct LabelObject: Object {
-    var image: UIImage = #imageLiteral(resourceName: "UICollectionViewController")
+    var image: UIImage = #imageLiteral(resourceName: "UILabel")
     var title: String = "label_title".localize
     var description: String = "label_description".localize
     var category: ObjectCategory = .viewController
