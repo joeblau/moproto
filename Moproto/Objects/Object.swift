@@ -11,7 +11,7 @@ import MobileCoreServices
 
 enum ObjectCategory {
     case viewController
-    case widget
+    case controller
     case gesture
     case view
     case control

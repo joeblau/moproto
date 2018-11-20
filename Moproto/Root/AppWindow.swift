@@ -25,11 +25,10 @@ class AppWindow: UIWindow {
         doubleTap.numberOfTouchesRequired = 1
         
         addGestureRecognizer(doubleTap)
-        rootViewController = ViewController()
+        rootViewController = InitialViewController()
 
         let dropInteraction = UIDropInteraction(delegate: self)
         addInteraction(dropInteraction)
-        
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -39,8 +38,6 @@ class AppWindow: UIWindow {
     @objc func dispalyHud() {
         visualizationWindow.makeKeyAndVisible()
     }
-
-
 }
 
 extension AppWindow: HUDObjectsActionable {

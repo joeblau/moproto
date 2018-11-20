@@ -8,6 +8,8 @@
 
 "view_controller_title" = "View Controller";
 "view_controller_description" = "A controller that manages a view.";
+"storyboard_reference_title" = "Storyboard Reference";
+"storyboard_reference_description" = "Provides a placeholder for a view controller in an external storyboard.";
 "navigation_controller_title" = "Navigation Controller";
 "navigation_controller_description" = "A controller that manages navigation through a hierarchy of views.";
 "table_view_controller_title" = "Table View Controller";

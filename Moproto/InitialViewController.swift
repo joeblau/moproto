@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  InitialViewController.swift
 //  Moproto
 //
 //  Created by Joe Blau on 8/31/18.
@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class InitialViewController: UIViewController {
 
     fileprivate let noProjectLabel = UILabel()
 
@@ -17,7 +17,6 @@ class ViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         noProjectLabel.translatesAutoresizingMaskIntoConstraints = false
         noProjectLabel.text = "Double tap screen to begin"
-
     }
 
     required init?(coder aDecoder: NSCoder) {

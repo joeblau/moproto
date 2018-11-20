@@ -7,23 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E607119B21A3879600C3BD2B /* BlankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607119A21A3879600C3BD2B /* BlankViewController.swift */; };
+		E6662E37213C1232007AAFDF /* StoryboardReferenceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6662E36213C1232007AAFDF /* StoryboardReferenceObject.swift */; };
 		E669ED92213A014E00710F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669ED91213A014E00710F5D /* AppDelegate.swift */; };
-		E669ED94213A014E00710F5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669ED93213A014E00710F5D /* ViewController.swift */; };
+		E669ED94213A014E00710F5D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669ED93213A014E00710F5D /* InitialViewController.swift */; };
 		E669ED99213A014E00710F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E669ED98213A014E00710F5D /* Assets.xcassets */; };
 		E669ED9C213A014E00710F5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E669ED9A213A014E00710F5D /* LaunchScreen.storyboard */; };
 		E669EDA5213A058000710F5D /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669EDA4213A058000710F5D /* AppWindow.swift */; };
 		E669EDA8213A084900710F5D /* HUDObjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669EDA7213A084900710F5D /* HUDObjectsViewController.swift */; };
 		E669EDAC213A0FC000710F5D /* HUDObjectsViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669EDAB213A0FC000710F5D /* HUDObjectsViewController+UITableViewDataSource.swift */; };
+		E676E249213BF5B500CA55D2 /* PanGestureRecognizerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E230213BF5B100CA55D2 /* PanGestureRecognizerObject.swift */; };
+		E676E24A213BF5B500CA55D2 /* PinchGestureRecognizerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E231213BF5B100CA55D2 /* PinchGestureRecognizerObject.swift */; };
+		E676E24B213BF5B500CA55D2 /* WebkitViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E232213BF5B200CA55D2 /* WebkitViewObject.swift */; };
+		E676E24C213BF5B500CA55D2 /* BarButtonItemFlexibleSpaceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E233213BF5B200CA55D2 /* BarButtonItemFlexibleSpaceObject.swift */; };
+		E676E24D213BF5B500CA55D2 /* VisualEffectViewswithBlurandVibrancyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E234213BF5B200CA55D2 /* VisualEffectViewswithBlurandVibrancyObject.swift */; };
+		E676E24E213BF5B500CA55D2 /* ScreenEdgePanGestureRecognizerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E235213BF5B200CA55D2 /* ScreenEdgePanGestureRecognizerObject.swift */; };
+		E676E24F213BF5B500CA55D2 /* TableViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E236213BF5B200CA55D2 /* TableViewObject.swift */; };
+		E676E250213BF5B500CA55D2 /* NavigationItemObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E237213BF5B200CA55D2 /* NavigationItemObject.swift */; };
+		E676E251213BF5B500CA55D2 /* SegmentedControlObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E238213BF5B200CA55D2 /* SegmentedControlObject.swift */; };
+		E676E252213BF5B500CA55D2 /* CollectionReusableViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E239213BF5B300CA55D2 /* CollectionReusableViewObject.swift */; };
+		E676E253213BF5B500CA55D2 /* StepperObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E23A213BF5B300CA55D2 /* StepperObject.swift */; };
+		E676E254213BF5B500CA55D2 /* ImageViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E23B213BF5B300CA55D2 /* ImageViewObject.swift */; };
+		E676E255213BF5B500CA55D2 /* TabBarControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E23C213BF5B300CA55D2 /* TabBarControllerObject.swift */; };
+		E676E256213BF5B500CA55D2 /* PickerViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E23D213BF5B300CA55D2 /* PickerViewObject.swift */; };
+		E676E257213BF5B500CA55D2 /* ToolbarObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E23E213BF5B300CA55D2 /* ToolbarObject.swift */; };
+		E676E258213BF5B500CA55D2 /* BarButtonItemObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E23F213BF5B300CA55D2 /* BarButtonItemObject.swift */; };
+		E676E259213BF5B500CA55D2 /* LabelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E240213BF5B300CA55D2 /* LabelObject.swift */; };
+		E676E25A213BF5B500CA55D2 /* PageControlObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E241213BF5B400CA55D2 /* PageControlObject.swift */; };
+		E676E25B213BF5B500CA55D2 /* TextFieldObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E242213BF5B400CA55D2 /* TextFieldObject.swift */; };
+		E676E25C213BF5B500CA55D2 /* CollectionViewCellObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E243213BF5B400CA55D2 /* CollectionViewCellObject.swift */; };
+		E676E25D213BF5B500CA55D2 /* VerticalStackViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E244213BF5B400CA55D2 /* VerticalStackViewObject.swift */; };
+		E676E25E213BF5B500CA55D2 /* MetalkitViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E245213BF5B400CA55D2 /* MetalkitViewObject.swift */; };
+		E676E25F213BF5B500CA55D2 /* PageViewControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E246213BF5B400CA55D2 /* PageViewControllerObject.swift */; };
+		E676E260213BF5B500CA55D2 /* GlkitViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E247213BF5B400CA55D2 /* GlkitViewObject.swift */; };
+		E676E261213BF5B500CA55D2 /* ArkitSpritekitViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E248213BF5B400CA55D2 /* ArkitSpritekitViewObject.swift */; };
+		E676E263213BFAA300CA55D2 /* CollectionViewControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A17213BF5200039D774 /* CollectionViewControllerObject.swift */; };
+		E676E264213BFAA300CA55D2 /* CollectionViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E628F07A213BF589008F12E5 /* CollectionViewObject.swift */; };
+		E676E265213BFAA300CA55D2 /* DatePickerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E628F07B213BF589008F12E5 /* DatePickerObject.swift */; };
+		E676E266213BFAA300CA55D2 /* HorizontalStackViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E628F075213BF589008F12E5 /* HorizontalStackViewObject.swift */; };
+		E676E267213BFAA300CA55D2 /* ObjectObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E628F074213BF589008F12E5 /* ObjectObject.swift */; };
+		E676E268213BFAA300CA55D2 /* ScenekitViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E628F079213BF589008F12E5 /* ScenekitViewObject.swift */; };
+		E676E269213BFAA300CA55D2 /* SearchBarandSearchDisplayControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E628F073213BF588008F12E5 /* SearchBarandSearchDisplayControllerObject.swift */; };
+		E676E26A213BFAA300CA55D2 /* SliderObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E628F077213BF589008F12E5 /* SliderObject.swift */; };
+		E676E26B213BFAA300CA55D2 /* SplitViewControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E628F078213BF589008F12E5 /* SplitViewControllerObject.swift */; };
+		E676E26C213BFAA300CA55D2 /* TapGestureRecognizerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E628F07C213BF58A008F12E5 /* TapGestureRecognizerObject.swift */; };
+		E676E26D213BFAA300CA55D2 /* VisualEffectViewwithBlurObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E628F076213BF589008F12E5 /* VisualEffectViewwithBlurObject.swift */; };
+		E676E26E213BFAA300CA55D2 /* ActivityIndicatorViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A0A213BF51F0039D774 /* ActivityIndicatorViewObject.swift */; };
+		E676E26F213BFAA300CA55D2 /* ArkitScenekitViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A09213BF51F0039D774 /* ArkitScenekitViewObject.swift */; };
+		E676E270213BFAA300CA55D2 /* AvkitPlayerViewControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A14213BF5200039D774 /* AvkitPlayerViewControllerObject.swift */; };
+		E676E271213BFAA300CA55D2 /* CustomGestureRecognizerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A0F213BF51F0039D774 /* CustomGestureRecognizerObject.swift */; };
+		E676E272213BFAA300CA55D2 /* BarButtonItemFixedSpaceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A08213BF51F0039D774 /* BarButtonItemFixedSpaceObject.swift */; };
+		E676E273213BFAA300CA55D2 /* GlkitViewControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A0D213BF51F0039D774 /* GlkitViewControllerObject.swift */; };
+		E676E274213BFAA300CA55D2 /* LongPressGestureRecognizerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A1E213BF5210039D774 /* LongPressGestureRecognizerObject.swift */; };
+		E676E275213BFAA300CA55D2 /* MapKitViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A1D213BF5210039D774 /* MapKitViewObject.swift */; };
+		E676E276213BFAA300CA55D2 /* NavigationBarObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A19213BF5200039D774 /* NavigationBarObject.swift */; };
+		E676E277213BFAA300CA55D2 /* ProgressViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A0B213BF51F0039D774 /* ProgressViewObject.swift */; };
+		E676E278213BFAA300CA55D2 /* RotationGestureRecognizerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A1C213BF5210039D774 /* RotationGestureRecognizerObject.swift */; };
+		E676E279213BFAA300CA55D2 /* ScrollViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A15213BF5200039D774 /* ScrollViewObject.swift */; };
+		E676E27A213BFAA300CA55D2 /* SearchBarObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A16213BF5200039D774 /* SearchBarObject.swift */; };
+		E676E27B213BFAA300CA55D2 /* SpritekitViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A0C213BF51F0039D774 /* SpritekitViewObject.swift */; };
+		E676E27C213BFAA300CA55D2 /* SwipeGestureRecognizerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A0E213BF51F0039D774 /* SwipeGestureRecognizerObject.swift */; };
+		E676E27D213BFAA300CA55D2 /* SwitchObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A18213BF5200039D774 /* SwitchObject.swift */; };
+		E676E27E213BFAA300CA55D2 /* TabBarItemObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A10213BF51F0039D774 /* TabBarItemObject.swift */; };
+		E676E27F213BFAA300CA55D2 /* TabBarObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A12213BF5200039D774 /* TabBarObject.swift */; };
+		E676E280213BFAA300CA55D2 /* TableViewCellObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A1A213BF5200039D774 /* TableViewCellObject.swift */; };
+		E676E281213BFAA300CA55D2 /* TextViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A06213BF51E0039D774 /* TextViewObject.swift */; };
+		E6A94BE1213C0CF1006442BB /* ButtonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A94BE0213C0CF0006442BB /* ButtonObject.swift */; };
+		E6A94BE3213C0D09006442BB /* NavigationControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A94BE2213C0D09006442BB /* NavigationControllerObject.swift */; };
 		E6C379DF213A2D2B0039D774 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379DE213A2D2B0039D774 /* Object.swift */; };
 		E6C379E2213A2D910039D774 /* ObjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379E1213A2D910039D774 /* ObjectFactory.swift */; };
 		E6C379E4213A30460039D774 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6C379E3213A30460039D774 /* Localizable.strings */; };
 		E6C379E7213A30910039D774 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379E6213A30910039D774 /* String+Extensions.swift */; };
 		E6C379E9213AB2FE0039D774 /* ViewControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379E8213AB2FE0039D774 /* ViewControllerObject.swift */; };
-		E6C379EB213AB3B70039D774 /* NavigationControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379EA213AB3B70039D774 /* NavigationControllerObject.swift */; };
 		E6C379ED213AB40E0039D774 /* TableViewControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379EC213AB40E0039D774 /* TableViewControllerObject.swift */; };
 		E6C379EF213AD9790039D774 /* ViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379EE213AD9790039D774 /* ViewObject.swift */; };
 		E6C379F1213ADA770039D774 /* ContainerViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379F0213ADA770039D774 /* ContainerViewObject.swift */; };
-		E6C379F5213B66D70039D774 /* ButtonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379F4213B66D70039D774 /* ButtonObject.swift */; };
 		E6C379F9213B6D8F0039D774 /* HUDObjectsViewController+UITableViewDragDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379F8213B6D8F0039D774 /* HUDObjectsViewController+UITableViewDragDelegate.swift */; };
 		E6C379FB213B6DDF0039D774 /* HUDObjectsViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379FA213B6DDF0039D774 /* HUDObjectsViewController+UITableViewDelegate.swift */; };
 		E6C37A02213B810D0039D774 /* MoprotoObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A01213B810D0039D774 /* MoprotoObjectType.swift */; };
@@ -31,30 +89,87 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E607119A21A3879600C3BD2B /* BlankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankViewController.swift; sourceTree = "<group>"; };
+		E628F073213BF588008F12E5 /* SearchBarandSearchDisplayControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarandSearchDisplayControllerObject.swift; sourceTree = "<group>"; };
+		E628F074213BF589008F12E5 /* ObjectObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectObject.swift; sourceTree = "<group>"; };
+		E628F075213BF589008F12E5 /* HorizontalStackViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalStackViewObject.swift; sourceTree = "<group>"; };
+		E628F076213BF589008F12E5 /* VisualEffectViewwithBlurObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectViewwithBlurObject.swift; sourceTree = "<group>"; };
+		E628F077213BF589008F12E5 /* SliderObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderObject.swift; sourceTree = "<group>"; };
+		E628F078213BF589008F12E5 /* SplitViewControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewControllerObject.swift; sourceTree = "<group>"; };
+		E628F079213BF589008F12E5 /* ScenekitViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenekitViewObject.swift; sourceTree = "<group>"; };
+		E628F07A213BF589008F12E5 /* CollectionViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewObject.swift; sourceTree = "<group>"; };
+		E628F07B213BF589008F12E5 /* DatePickerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerObject.swift; sourceTree = "<group>"; };
+		E628F07C213BF58A008F12E5 /* TapGestureRecognizerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureRecognizerObject.swift; sourceTree = "<group>"; };
+		E6662E36213C1232007AAFDF /* StoryboardReferenceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardReferenceObject.swift; sourceTree = "<group>"; };
 		E669ED8E213A014E00710F5D /* Moproto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moproto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E669ED91213A014E00710F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E669ED93213A014E00710F5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E669ED93213A014E00710F5D /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		E669ED98213A014E00710F5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E669ED9B213A014E00710F5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E669ED9D213A014E00710F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E669EDA4213A058000710F5D /* AppWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindow.swift; sourceTree = "<group>"; };
 		E669EDA7213A084900710F5D /* HUDObjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDObjectsViewController.swift; sourceTree = "<group>"; };
 		E669EDAB213A0FC000710F5D /* HUDObjectsViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUDObjectsViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		E676E230213BF5B100CA55D2 /* PanGestureRecognizerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanGestureRecognizerObject.swift; sourceTree = "<group>"; };
+		E676E231213BF5B100CA55D2 /* PinchGestureRecognizerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchGestureRecognizerObject.swift; sourceTree = "<group>"; };
+		E676E232213BF5B200CA55D2 /* WebkitViewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebkitViewObject.swift; sourceTree = "<group>"; };
+		E676E233213BF5B200CA55D2 /* BarButtonItemFlexibleSpaceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarButtonItemFlexibleSpaceObject.swift; sourceTree = "<group>"; };
+		E676E234213BF5B200CA55D2 /* VisualEffectViewswithBlurandVibrancyObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectViewswithBlurandVibrancyObject.swift; sourceTree = "<group>"; };
+		E676E235213BF5B200CA55D2 /* ScreenEdgePanGestureRecognizerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenEdgePanGestureRecognizerObject.swift; sourceTree = "<group>"; };
+		E676E236213BF5B200CA55D2 /* TableViewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewObject.swift; sourceTree = "<group>"; };
+		E676E237213BF5B200CA55D2 /* NavigationItemObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationItemObject.swift; sourceTree = "<group>"; };
+		E676E238213BF5B200CA55D2 /* SegmentedControlObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlObject.swift; sourceTree = "<group>"; };
+		E676E239213BF5B300CA55D2 /* CollectionReusableViewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionReusableViewObject.swift; sourceTree = "<group>"; };
+		E676E23A213BF5B300CA55D2 /* StepperObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperObject.swift; sourceTree = "<group>"; };
+		E676E23B213BF5B300CA55D2 /* ImageViewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewObject.swift; sourceTree = "<group>"; };
+		E676E23C213BF5B300CA55D2 /* TabBarControllerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarControllerObject.swift; sourceTree = "<group>"; };
+		E676E23D213BF5B300CA55D2 /* PickerViewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewObject.swift; sourceTree = "<group>"; };
+		E676E23E213BF5B300CA55D2 /* ToolbarObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarObject.swift; sourceTree = "<group>"; };
+		E676E23F213BF5B300CA55D2 /* BarButtonItemObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarButtonItemObject.swift; sourceTree = "<group>"; };
+		E676E240213BF5B300CA55D2 /* LabelObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelObject.swift; sourceTree = "<group>"; };
+		E676E241213BF5B400CA55D2 /* PageControlObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlObject.swift; sourceTree = "<group>"; };
+		E676E242213BF5B400CA55D2 /* TextFieldObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldObject.swift; sourceTree = "<group>"; };
+		E676E243213BF5B400CA55D2 /* CollectionViewCellObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellObject.swift; sourceTree = "<group>"; };
+		E676E244213BF5B400CA55D2 /* VerticalStackViewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalStackViewObject.swift; sourceTree = "<group>"; };
+		E676E245213BF5B400CA55D2 /* MetalkitViewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalkitViewObject.swift; sourceTree = "<group>"; };
+		E676E246213BF5B400CA55D2 /* PageViewControllerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewControllerObject.swift; sourceTree = "<group>"; };
+		E676E247213BF5B400CA55D2 /* GlkitViewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlkitViewObject.swift; sourceTree = "<group>"; };
+		E676E248213BF5B400CA55D2 /* ArkitSpritekitViewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArkitSpritekitViewObject.swift; sourceTree = "<group>"; };
+		E6A94BE0213C0CF0006442BB /* ButtonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonObject.swift; sourceTree = "<group>"; };
+		E6A94BE2213C0D09006442BB /* NavigationControllerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerObject.swift; sourceTree = "<group>"; };
 		E6C379DE213A2D2B0039D774 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		E6C379E1213A2D910039D774 /* ObjectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectFactory.swift; sourceTree = "<group>"; };
 		E6C379E3213A30460039D774 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E6C379E6213A30910039D774 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		E6C379E8213AB2FE0039D774 /* ViewControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerObject.swift; sourceTree = "<group>"; };
-		E6C379EA213AB3B70039D774 /* NavigationControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerObject.swift; sourceTree = "<group>"; };
 		E6C379EC213AB40E0039D774 /* TableViewControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerObject.swift; sourceTree = "<group>"; };
 		E6C379EE213AD9790039D774 /* ViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewObject.swift; sourceTree = "<group>"; };
 		E6C379F0213ADA770039D774 /* ContainerViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewObject.swift; sourceTree = "<group>"; };
-		E6C379F4213B66D70039D774 /* ButtonObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonObject.swift; sourceTree = "<group>"; };
 		E6C379F8213B6D8F0039D774 /* HUDObjectsViewController+UITableViewDragDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUDObjectsViewController+UITableViewDragDelegate.swift"; sourceTree = "<group>"; };
 		E6C379FA213B6DDF0039D774 /* HUDObjectsViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUDObjectsViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
-		E6C37A00213B7D780039D774 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../../del/MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E6C37A01213B810D0039D774 /* MoprotoObjectType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoObjectType.swift; sourceTree = "<group>"; };
 		E6C37A03213B8C700039D774 /* AppWindow+UIDropInteractionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWindow+UIDropInteractionDelegate.swift"; sourceTree = "<group>"; };
+		E6C37A06213BF51E0039D774 /* TextViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewObject.swift; sourceTree = "<group>"; };
+		E6C37A08213BF51F0039D774 /* BarButtonItemFixedSpaceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemFixedSpaceObject.swift; sourceTree = "<group>"; };
+		E6C37A09213BF51F0039D774 /* ArkitScenekitViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArkitScenekitViewObject.swift; sourceTree = "<group>"; };
+		E6C37A0A213BF51F0039D774 /* ActivityIndicatorViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewObject.swift; sourceTree = "<group>"; };
+		E6C37A0B213BF51F0039D774 /* ProgressViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewObject.swift; sourceTree = "<group>"; };
+		E6C37A0C213BF51F0039D774 /* SpritekitViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpritekitViewObject.swift; sourceTree = "<group>"; };
+		E6C37A0D213BF51F0039D774 /* GlkitViewControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlkitViewControllerObject.swift; sourceTree = "<group>"; };
+		E6C37A0E213BF51F0039D774 /* SwipeGestureRecognizerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeGestureRecognizerObject.swift; sourceTree = "<group>"; };
+		E6C37A0F213BF51F0039D774 /* CustomGestureRecognizerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGestureRecognizerObject.swift; sourceTree = "<group>"; };
+		E6C37A10213BF51F0039D774 /* TabBarItemObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemObject.swift; sourceTree = "<group>"; };
+		E6C37A12213BF5200039D774 /* TabBarObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarObject.swift; sourceTree = "<group>"; };
+		E6C37A14213BF5200039D774 /* AvkitPlayerViewControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvkitPlayerViewControllerObject.swift; sourceTree = "<group>"; };
+		E6C37A15213BF5200039D774 /* ScrollViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewObject.swift; sourceTree = "<group>"; };
+		E6C37A16213BF5200039D774 /* SearchBarObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarObject.swift; sourceTree = "<group>"; };
+		E6C37A17213BF5200039D774 /* CollectionViewControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerObject.swift; sourceTree = "<group>"; };
+		E6C37A18213BF5200039D774 /* SwitchObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchObject.swift; sourceTree = "<group>"; };
+		E6C37A19213BF5200039D774 /* NavigationBarObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarObject.swift; sourceTree = "<group>"; };
+		E6C37A1A213BF5200039D774 /* TableViewCellObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellObject.swift; sourceTree = "<group>"; };
+		E6C37A1C213BF5210039D774 /* RotationGestureRecognizerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureRecognizerObject.swift; sourceTree = "<group>"; };
+		E6C37A1D213BF5210039D774 /* MapKitViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewObject.swift; sourceTree = "<group>"; };
+		E6C37A1E213BF5210039D774 /* LongPressGestureRecognizerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGestureRecognizerObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +186,6 @@
 		E669ED85213A014D00710F5D = {
 			isa = PBXGroup;
 			children = (
-				E6C37A00213B7D780039D774 /* MyPlayground.playground */,
 				E6C379E3213A30460039D774 /* Localizable.strings */,
 				E669ED90213A014E00710F5D /* Moproto */,
 				E669ED8F213A014E00710F5D /* Products */,
@@ -89,12 +203,13 @@
 		E669ED90213A014E00710F5D /* Moproto */ = {
 			isa = PBXGroup;
 			children = (
-				E6C379E5213A30800039D774 /* Extensions */,
+				E6C379E5213A30800039D774 /* Extensiosn */,
 				E6C379DD213A2D1D0039D774 /* Objects */,
 				E669EDA6213A083A00710F5D /* HUD */,
 				E669EDA3213A04D400710F5D /* Root */,
 				E669ED91213A014E00710F5D /* AppDelegate.swift */,
-				E669ED93213A014E00710F5D /* ViewController.swift */,
+				E669ED93213A014E00710F5D /* InitialViewController.swift */,
+				E607119A21A3879600C3BD2B /* BlankViewController.swift */,
 				E669ED98213A014E00710F5D /* Assets.xcassets */,
 				E669ED9A213A014E00710F5D /* LaunchScreen.storyboard */,
 				E669ED9D213A014E00710F5D /* Info.plist */,
@@ -133,21 +248,78 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
-		E6C379E5213A30800039D774 /* Extensions */ = {
+		E6C379E5213A30800039D774 /* Extensiosn */ = {
 			isa = PBXGroup;
 			children = (
 				E6C379E6213A30910039D774 /* String+Extensions.swift */,
 			);
-			path = Extensions;
+			path = Extensiosn;
 			sourceTree = "<group>";
 		};
 		E6C37A05213BF3180039D774 /* Concrete */ = {
 			isa = PBXGroup;
 			children = (
 				E6C379E8213AB2FE0039D774 /* ViewControllerObject.swift */,
-				E6C379EA213AB3B70039D774 /* NavigationControllerObject.swift */,
+				E6662E36213C1232007AAFDF /* StoryboardReferenceObject.swift */,
+				E6A94BE2213C0D09006442BB /* NavigationControllerObject.swift */,
 				E6C379EC213AB40E0039D774 /* TableViewControllerObject.swift */,
-				E6C379F4213B66D70039D774 /* ButtonObject.swift */,
+				E6C37A17213BF5200039D774 /* CollectionViewControllerObject.swift */,
+				E676E23C213BF5B300CA55D2 /* TabBarControllerObject.swift */,
+				E628F078213BF589008F12E5 /* SplitViewControllerObject.swift */,
+				E676E246213BF5B400CA55D2 /* PageViewControllerObject.swift */,
+				E6C37A0D213BF51F0039D774 /* GlkitViewControllerObject.swift */,
+				E6C37A14213BF5200039D774 /* AvkitPlayerViewControllerObject.swift */,
+				E628F074213BF589008F12E5 /* ObjectObject.swift */,
+				E676E240213BF5B300CA55D2 /* LabelObject.swift */,
+				E6A94BE0213C0CF0006442BB /* ButtonObject.swift */,
+				E676E238213BF5B200CA55D2 /* SegmentedControlObject.swift */,
+				E676E242213BF5B400CA55D2 /* TextFieldObject.swift */,
+				E628F077213BF589008F12E5 /* SliderObject.swift */,
+				E6C37A18213BF5200039D774 /* SwitchObject.swift */,
+				E6C37A0A213BF51F0039D774 /* ActivityIndicatorViewObject.swift */,
+				E6C37A0B213BF51F0039D774 /* ProgressViewObject.swift */,
+				E676E241213BF5B400CA55D2 /* PageControlObject.swift */,
+				E676E23A213BF5B300CA55D2 /* StepperObject.swift */,
+				E628F075213BF589008F12E5 /* HorizontalStackViewObject.swift */,
+				E676E244213BF5B400CA55D2 /* VerticalStackViewObject.swift */,
+				E676E236213BF5B200CA55D2 /* TableViewObject.swift */,
+				E6C37A1A213BF5200039D774 /* TableViewCellObject.swift */,
+				E676E23B213BF5B300CA55D2 /* ImageViewObject.swift */,
+				E628F07A213BF589008F12E5 /* CollectionViewObject.swift */,
+				E676E243213BF5B400CA55D2 /* CollectionViewCellObject.swift */,
+				E676E239213BF5B300CA55D2 /* CollectionReusableViewObject.swift */,
+				E6C37A06213BF51E0039D774 /* TextViewObject.swift */,
+				E6C37A15213BF5200039D774 /* ScrollViewObject.swift */,
+				E628F07B213BF589008F12E5 /* DatePickerObject.swift */,
+				E676E23D213BF5B300CA55D2 /* PickerViewObject.swift */,
+				E628F076213BF589008F12E5 /* VisualEffectViewwithBlurObject.swift */,
+				E676E234213BF5B200CA55D2 /* VisualEffectViewswithBlurandVibrancyObject.swift */,
+				E6C37A1D213BF5210039D774 /* MapKitViewObject.swift */,
+				E676E245213BF5B400CA55D2 /* MetalkitViewObject.swift */,
+				E676E247213BF5B400CA55D2 /* GlkitViewObject.swift */,
+				E628F079213BF589008F12E5 /* ScenekitViewObject.swift */,
+				E6C37A0C213BF51F0039D774 /* SpritekitViewObject.swift */,
+				E6C37A09213BF51F0039D774 /* ArkitScenekitViewObject.swift */,
+				E676E248213BF5B400CA55D2 /* ArkitSpritekitViewObject.swift */,
+				E676E232213BF5B200CA55D2 /* WebkitViewObject.swift */,
+				E628F07C213BF58A008F12E5 /* TapGestureRecognizerObject.swift */,
+				E676E231213BF5B100CA55D2 /* PinchGestureRecognizerObject.swift */,
+				E6C37A1C213BF5210039D774 /* RotationGestureRecognizerObject.swift */,
+				E6C37A0E213BF51F0039D774 /* SwipeGestureRecognizerObject.swift */,
+				E676E230213BF5B100CA55D2 /* PanGestureRecognizerObject.swift */,
+				E676E235213BF5B200CA55D2 /* ScreenEdgePanGestureRecognizerObject.swift */,
+				E6C37A1E213BF5210039D774 /* LongPressGestureRecognizerObject.swift */,
+				E6C37A0F213BF51F0039D774 /* CustomGestureRecognizerObject.swift */,
+				E6C37A19213BF5200039D774 /* NavigationBarObject.swift */,
+				E676E237213BF5B200CA55D2 /* NavigationItemObject.swift */,
+				E676E23E213BF5B300CA55D2 /* ToolbarObject.swift */,
+				E676E23F213BF5B300CA55D2 /* BarButtonItemObject.swift */,
+				E6C37A12213BF5200039D774 /* TabBarObject.swift */,
+				E6C37A10213BF51F0039D774 /* TabBarItemObject.swift */,
+				E6C37A16213BF5200039D774 /* SearchBarObject.swift */,
+				E628F073213BF588008F12E5 /* SearchBarandSearchDisplayControllerObject.swift */,
+				E676E233213BF5B200CA55D2 /* BarButtonItemFlexibleSpaceObject.swift */,
+				E6C37A08213BF51F0039D774 /* BarButtonItemFixedSpaceObject.swift */,
 				E6C379EE213AD9790039D774 /* ViewObject.swift */,
 				E6C379F0213ADA770039D774 /* ContainerViewObject.swift */,
 			);
@@ -225,24 +397,82 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E669ED94213A014E00710F5D /* ViewController.swift in Sources */,
+				E669ED94213A014E00710F5D /* InitialViewController.swift in Sources */,
+				E676E27B213BFAA300CA55D2 /* SpritekitViewObject.swift in Sources */,
+				E676E275213BFAA300CA55D2 /* MapKitViewObject.swift in Sources */,
+				E676E259213BF5B500CA55D2 /* LabelObject.swift in Sources */,
+				E676E256213BF5B500CA55D2 /* PickerViewObject.swift in Sources */,
+				E676E25C213BF5B500CA55D2 /* CollectionViewCellObject.swift in Sources */,
+				E676E27D213BFAA300CA55D2 /* SwitchObject.swift in Sources */,
 				E6C379E9213AB2FE0039D774 /* ViewControllerObject.swift in Sources */,
+				E676E263213BFAA300CA55D2 /* CollectionViewControllerObject.swift in Sources */,
+				E676E265213BFAA300CA55D2 /* DatePickerObject.swift in Sources */,
 				E669EDAC213A0FC000710F5D /* HUDObjectsViewController+UITableViewDataSource.swift in Sources */,
+				E676E261213BF5B500CA55D2 /* ArkitSpritekitViewObject.swift in Sources */,
+				E676E25B213BF5B500CA55D2 /* TextFieldObject.swift in Sources */,
+				E676E249213BF5B500CA55D2 /* PanGestureRecognizerObject.swift in Sources */,
+				E676E26F213BFAA300CA55D2 /* ArkitScenekitViewObject.swift in Sources */,
+				E676E274213BFAA300CA55D2 /* LongPressGestureRecognizerObject.swift in Sources */,
+				E676E24F213BF5B500CA55D2 /* TableViewObject.swift in Sources */,
+				E676E25D213BF5B500CA55D2 /* VerticalStackViewObject.swift in Sources */,
 				E6C379E2213A2D910039D774 /* ObjectFactory.swift in Sources */,
+				E676E24A213BF5B500CA55D2 /* PinchGestureRecognizerObject.swift in Sources */,
+				E6A94BE3213C0D09006442BB /* NavigationControllerObject.swift in Sources */,
+				E676E24D213BF5B500CA55D2 /* VisualEffectViewswithBlurandVibrancyObject.swift in Sources */,
 				E669EDA5213A058000710F5D /* AppWindow.swift in Sources */,
+				E676E266213BFAA300CA55D2 /* HorizontalStackViewObject.swift in Sources */,
+				E676E27E213BFAA300CA55D2 /* TabBarItemObject.swift in Sources */,
+				E6A94BE1213C0CF1006442BB /* ButtonObject.swift in Sources */,
 				E6C379F1213ADA770039D774 /* ContainerViewObject.swift in Sources */,
-				E6C379F5213B66D70039D774 /* ButtonObject.swift in Sources */,
+				E676E257213BF5B500CA55D2 /* ToolbarObject.swift in Sources */,
+				E676E253213BF5B500CA55D2 /* StepperObject.swift in Sources */,
+				E676E271213BFAA300CA55D2 /* CustomGestureRecognizerObject.swift in Sources */,
 				E6C379EF213AD9790039D774 /* ViewObject.swift in Sources */,
 				E6C379E7213A30910039D774 /* String+Extensions.swift in Sources */,
-				E6C379EB213AB3B70039D774 /* NavigationControllerObject.swift in Sources */,
+				E676E25F213BF5B500CA55D2 /* PageViewControllerObject.swift in Sources */,
 				E669EDA8213A084900710F5D /* HUDObjectsViewController.swift in Sources */,
+				E676E267213BFAA300CA55D2 /* ObjectObject.swift in Sources */,
+				E676E26C213BFAA300CA55D2 /* TapGestureRecognizerObject.swift in Sources */,
+				E676E26B213BFAA300CA55D2 /* SplitViewControllerObject.swift in Sources */,
+				E676E26E213BFAA300CA55D2 /* ActivityIndicatorViewObject.swift in Sources */,
+				E676E251213BF5B500CA55D2 /* SegmentedControlObject.swift in Sources */,
+				E676E255213BF5B500CA55D2 /* TabBarControllerObject.swift in Sources */,
+				E676E27F213BFAA300CA55D2 /* TabBarObject.swift in Sources */,
+				E676E280213BFAA300CA55D2 /* TableViewCellObject.swift in Sources */,
+				E676E254213BF5B500CA55D2 /* ImageViewObject.swift in Sources */,
+				E676E279213BFAA300CA55D2 /* ScrollViewObject.swift in Sources */,
+				E676E24B213BF5B500CA55D2 /* WebkitViewObject.swift in Sources */,
+				E6662E37213C1232007AAFDF /* StoryboardReferenceObject.swift in Sources */,
 				E6C379ED213AB40E0039D774 /* TableViewControllerObject.swift in Sources */,
+				E676E27C213BFAA300CA55D2 /* SwipeGestureRecognizerObject.swift in Sources */,
+				E676E26A213BFAA300CA55D2 /* SliderObject.swift in Sources */,
 				E6C37A04213B8C700039D774 /* AppWindow+UIDropInteractionDelegate.swift in Sources */,
+				E676E276213BFAA300CA55D2 /* NavigationBarObject.swift in Sources */,
 				E6C379DF213A2D2B0039D774 /* Object.swift in Sources */,
+				E676E269213BFAA300CA55D2 /* SearchBarandSearchDisplayControllerObject.swift in Sources */,
+				E676E264213BFAA300CA55D2 /* CollectionViewObject.swift in Sources */,
+				E676E278213BFAA300CA55D2 /* RotationGestureRecognizerObject.swift in Sources */,
+				E676E27A213BFAA300CA55D2 /* SearchBarObject.swift in Sources */,
 				E6C379F9213B6D8F0039D774 /* HUDObjectsViewController+UITableViewDragDelegate.swift in Sources */,
+				E676E26D213BFAA300CA55D2 /* VisualEffectViewwithBlurObject.swift in Sources */,
+				E676E272213BFAA300CA55D2 /* BarButtonItemFixedSpaceObject.swift in Sources */,
+				E607119B21A3879600C3BD2B /* BlankViewController.swift in Sources */,
 				E6C379FB213B6DDF0039D774 /* HUDObjectsViewController+UITableViewDelegate.swift in Sources */,
+				E676E252213BF5B500CA55D2 /* CollectionReusableViewObject.swift in Sources */,
+				E676E260213BF5B500CA55D2 /* GlkitViewObject.swift in Sources */,
+				E676E268213BFAA300CA55D2 /* ScenekitViewObject.swift in Sources */,
+				E676E25E213BF5B500CA55D2 /* MetalkitViewObject.swift in Sources */,
+				E676E24C213BF5B500CA55D2 /* BarButtonItemFlexibleSpaceObject.swift in Sources */,
 				E6C37A02213B810D0039D774 /* MoprotoObjectType.swift in Sources */,
+				E676E250213BF5B500CA55D2 /* NavigationItemObject.swift in Sources */,
+				E676E258213BF5B500CA55D2 /* BarButtonItemObject.swift in Sources */,
+				E676E277213BFAA300CA55D2 /* ProgressViewObject.swift in Sources */,
+				E676E273213BFAA300CA55D2 /* GlkitViewControllerObject.swift in Sources */,
 				E669ED92213A014E00710F5D /* AppDelegate.swift in Sources */,
+				E676E281213BFAA300CA55D2 /* TextViewObject.swift in Sources */,
+				E676E24E213BF5B500CA55D2 /* ScreenEdgePanGestureRecognizerObject.swift in Sources */,
+				E676E25A213BF5B500CA55D2 /* PageControlObject.swift in Sources */,
+				E676E270213BFAA300CA55D2 /* AvkitPlayerViewControllerObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
