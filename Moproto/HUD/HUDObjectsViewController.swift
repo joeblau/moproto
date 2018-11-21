@@ -10,6 +10,7 @@ import UIKit
 
 protocol HUDObjectsActionable {
     func dismiss()
+    func play()
 }
 
 class HUDObjectsViewController: UITableViewController {
@@ -25,7 +26,8 @@ class HUDObjectsViewController: UITableViewController {
         tableView.dataSource = self
         tableView.dragDelegate = self
 
-        navigationItem.leftBarButtonItems = [UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel, target: self, action: #selector(cancel))]
+        navigationItem.leftBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))]
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(play))]
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -34,12 +36,19 @@ class HUDObjectsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Objects"
-        view.backgroundColor = UIColor(white: 1.0, alpha: 0.94)
+        let sc =  UISegmentedControl(items: ["Objects"])
+        sc.selectedSegmentIndex = 0
+        navigationItem.titleView = sc
+
+        view.backgroundColor = UIColor(named: "hud-background")
     }
 
     @objc func cancel() {
         actionable?.dismiss()
+    }
+    
+    @objc func play() {
+        actionable?.play()
     }
     
     override var preferredScreenEdgesDeferringSystemGestures: UIRectEdge {

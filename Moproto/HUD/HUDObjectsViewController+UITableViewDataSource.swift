@@ -16,9 +16,11 @@ extension HUDObjectsViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: String(describing: UITableViewCell.self))
         cell.textLabel?.text = objects[indexPath.row].title
+        cell.textLabel?.textColor = UIColor.lightText
         cell.detailTextLabel?.text = objects[indexPath.row].description
+        cell.detailTextLabel?.textColor = UIColor.lightText
         cell.imageView?.image = objects[indexPath.row].image
-
+        cell.backgroundColor = .clear
         return cell
     }
 }

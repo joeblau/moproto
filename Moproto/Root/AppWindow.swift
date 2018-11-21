@@ -18,7 +18,10 @@ class AppWindow: UIWindow {
         super.init(frame: frame)
         hudObjects.actionable = self
         dashboardWindow.windowLevel = .statusBar
-        dashboardWindow.rootViewController = UINavigationController(rootViewController: hudObjects)
+        let navController = UINavigationController(rootViewController: hudObjects)
+        navController.navigationBar.barStyle = .blackTranslucent
+        
+        dashboardWindow.rootViewController = navController
         
         
         let screenEdge = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(dispalyHud))
@@ -44,5 +47,9 @@ class AppWindow: UIWindow {
 extension AppWindow: HUDObjectsActionable {
     func dismiss() {
         dashboardWindow.isHidden = true
+    }
+    
+    func play() {
+        // TODO:
     }
 }
