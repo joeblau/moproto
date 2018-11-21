@@ -72,6 +72,9 @@
 		E676E27F213BFAA300CA55D2 /* TabBarObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A12213BF5200039D774 /* TabBarObject.swift */; };
 		E676E280213BFAA300CA55D2 /* TableViewCellObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A1A213BF5200039D774 /* TableViewCellObject.swift */; };
 		E676E281213BFAA300CA55D2 /* TextViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A06213BF51E0039D774 /* TextViewObject.swift */; };
+		E67D46A021A55AF90000E7FA /* LiveEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D469F21A55AF90000E7FA /* LiveEditorView.swift */; };
+		E67D46A621A57A350000E7FA /* Editable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D46A521A57A350000E7FA /* Editable.swift */; };
+		E67D46A821A57CE50000E7FA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D46A721A57CE50000E7FA /* UIView+Extension.swift */; };
 		E6A94BE1213C0CF1006442BB /* ButtonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A94BE0213C0CF0006442BB /* ButtonObject.swift */; };
 		E6A94BE3213C0D09006442BB /* NavigationControllerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A94BE2213C0D09006442BB /* NavigationControllerObject.swift */; };
 		E6C379DF213A2D2B0039D774 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379DE213A2D2B0039D774 /* Object.swift */; };
@@ -135,6 +138,9 @@
 		E676E246213BF5B400CA55D2 /* PageViewControllerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewControllerObject.swift; sourceTree = "<group>"; };
 		E676E247213BF5B400CA55D2 /* GlkitViewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlkitViewObject.swift; sourceTree = "<group>"; };
 		E676E248213BF5B400CA55D2 /* ArkitSpritekitViewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArkitSpritekitViewObject.swift; sourceTree = "<group>"; };
+		E67D469F21A55AF90000E7FA /* LiveEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEditorView.swift; sourceTree = "<group>"; };
+		E67D46A521A57A350000E7FA /* Editable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editable.swift; sourceTree = "<group>"; };
+		E67D46A721A57CE50000E7FA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E6A94BE0213C0CF0006442BB /* ButtonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonObject.swift; sourceTree = "<group>"; };
 		E6A94BE2213C0D09006442BB /* NavigationControllerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerObject.swift; sourceTree = "<group>"; };
 		E6C379DE213A2D2B0039D774 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
@@ -203,6 +209,7 @@
 		E669ED90213A014E00710F5D /* Moproto */ = {
 			isa = PBXGroup;
 			children = (
+				E67D469E21A55ADA0000E7FA /* Editor */,
 				E6C379E5213A30800039D774 /* Extensiosn */,
 				E6C379DD213A2D1D0039D774 /* Objects */,
 				E669EDA6213A083A00710F5D /* HUD */,
@@ -237,6 +244,14 @@
 			path = HUD;
 			sourceTree = "<group>";
 		};
+		E67D469E21A55ADA0000E7FA /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				E67D469F21A55AF90000E7FA /* LiveEditorView.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
 		E6C379DD213A2D1D0039D774 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +259,7 @@
 				E6C37A01213B810D0039D774 /* MoprotoObjectType.swift */,
 				E6C379DE213A2D2B0039D774 /* Object.swift */,
 				E6C379E1213A2D910039D774 /* ObjectFactory.swift */,
+				E67D46A521A57A350000E7FA /* Editable.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -252,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				E6C379E6213A30910039D774 /* String+Extensions.swift */,
+				E67D46A721A57CE50000E7FA /* UIView+Extension.swift */,
 			);
 			path = Extensiosn;
 			sourceTree = "<group>";
@@ -414,6 +431,7 @@
 				E676E26F213BFAA300CA55D2 /* ArkitScenekitViewObject.swift in Sources */,
 				E676E274213BFAA300CA55D2 /* LongPressGestureRecognizerObject.swift in Sources */,
 				E676E24F213BF5B500CA55D2 /* TableViewObject.swift in Sources */,
+				E67D46A021A55AF90000E7FA /* LiveEditorView.swift in Sources */,
 				E676E25D213BF5B500CA55D2 /* VerticalStackViewObject.swift in Sources */,
 				E6C379E2213A2D910039D774 /* ObjectFactory.swift in Sources */,
 				E676E24A213BF5B500CA55D2 /* PinchGestureRecognizerObject.swift in Sources */,
@@ -426,12 +444,14 @@
 				E6C379F1213ADA770039D774 /* ContainerViewObject.swift in Sources */,
 				E676E257213BF5B500CA55D2 /* ToolbarObject.swift in Sources */,
 				E676E253213BF5B500CA55D2 /* StepperObject.swift in Sources */,
+				E67D46A821A57CE50000E7FA /* UIView+Extension.swift in Sources */,
 				E676E271213BFAA300CA55D2 /* CustomGestureRecognizerObject.swift in Sources */,
 				E6C379EF213AD9790039D774 /* ViewObject.swift in Sources */,
 				E6C379E7213A30910039D774 /* String+Extensions.swift in Sources */,
 				E676E25F213BF5B500CA55D2 /* PageViewControllerObject.swift in Sources */,
 				E669EDA8213A084900710F5D /* HUDObjectsViewController.swift in Sources */,
 				E676E267213BFAA300CA55D2 /* ObjectObject.swift in Sources */,
+				E67D46A621A57A350000E7FA /* Editable.swift in Sources */,
 				E676E26C213BFAA300CA55D2 /* TapGestureRecognizerObject.swift in Sources */,
 				E676E26B213BFAA300CA55D2 /* SplitViewControllerObject.swift in Sources */,
 				E676E26E213BFAA300CA55D2 /* ActivityIndicatorViewObject.swift in Sources */,

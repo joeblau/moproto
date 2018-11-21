@@ -20,7 +20,17 @@ extension HUDObjectsViewController {
         cell.detailTextLabel?.text = objects[indexPath.row].description
         cell.detailTextLabel?.textColor = UIColor.lightText
         cell.imageView?.image = objects[indexPath.row].image
-        cell.backgroundColor = .clear
+        cell.backgroundColor = UIColor(named: "cell-background")
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        cell.contentView.backgroundColor = UIColor(named: "cell-highlighted")
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        cell.contentView.backgroundColor = UIColor(named: "cell-selected")
     }
 }
