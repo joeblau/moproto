@@ -23,11 +23,16 @@ class AppWindow: UIWindow {
         
         dashboardWindow.rootViewController = navController
         
+//        let pan = UIPanGestureRecognizer(target: self, action: #selector(didPan(recognizer:)))
+//        addGestureRecognizer(pan)
         
-        let screenEdge = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(dispalyHud))
+        let screenEdge = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(didEdgePan(recognizer:)))
         screenEdge.edges = [.bottom]
-        
         addGestureRecognizer(screenEdge)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTap(recognizer:)))
+        addGestureRecognizer(tap)
+        
         rootViewController = InitialViewController()
 
         let dropInteraction = UIDropInteraction(delegate: self)
@@ -38,8 +43,24 @@ class AppWindow: UIWindow {
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc func dispalyHud() {
+    @objc func didEdgePan(recognizer: UIScreenEdgePanGestureRecognizer) {
         dashboardWindow.makeKeyAndVisible()
+    }
+    
+    @objc func didPan(recognizer: UIPanGestureRecognizer) {
+        
+    }
+    
+    @objc func didTap(recognizer: UITapGestureRecognizer) {
+
+        print(recognizer.view)
+        
+//            let lev = LiveEditorView(editable: view.editable)
+//        topView.addSubview(lev)
+//        lev.topAnchor.constraint(equalTo: view.topAnchor, constant: -EDITOR_BUFFER).isActive = true
+//        lev.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: EDITOR_BUFFER).isActive = true
+//        lev.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -EDITOR_BUFFER).isActive = true
+//        lev.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: EDITOR_BUFFER).isActive = true
     }
     
 }

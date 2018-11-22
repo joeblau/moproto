@@ -11,6 +11,7 @@ import UIKit
 private let EDITOR_BUFFER: CGFloat = 12
 
 extension AppWindow: UIDropInteractionDelegate {
+    
     func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
         return session.hasItemsConforming(toTypeIdentifiers: ["MoprotoObjectType"]) && session.items.count == 1
     }
@@ -95,13 +96,6 @@ extension AppWindow: UIDropInteractionDelegate {
             let center = session.location(in: topView)
             view.centerYAnchor.constraint(equalTo: topView.topAnchor, constant: center.y).isActive = true
             view.centerXAnchor.constraint(equalTo: topView.leadingAnchor, constant: center.x).isActive = true
-                        
-            let lev = LiveEditorView(editable: view.editable)
-            topView.addSubview(lev)
-            lev.topAnchor.constraint(equalTo: view.topAnchor, constant: -EDITOR_BUFFER).isActive = true
-            lev.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: EDITOR_BUFFER).isActive = true
-            lev.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -EDITOR_BUFFER).isActive = true
-            lev.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: EDITOR_BUFFER).isActive = true
         }
         if let selectedIndex = (self.rootViewController as? UITabBarController)?.selectedIndex,
             let topView = (self.rootViewController as? UITabBarController)?.viewControllers?[selectedIndex].view {
