@@ -2,4 +2,70 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Moproto/Custom View Controllers/DeferredTableViewController.swift"
+            timestampString = "564865127.062711"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "init(dataSource:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Moproto/HUD/HUDObjectsViewController.swift"
+            timestampString = "564865127.062796"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "selectSegment(segmented:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Moproto.HUDObjectsViewController.selectSegment(segmented: __C.UISegmentedControl) -&gt; ()"
+                  moduleName = "Moproto"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josephblau/Developer/joeblau/src/moproto/Moproto/HUD/HUDObjectsViewController.swift"
+                  timestampString = "564865127.0818681"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Moproto.HUDObjectsViewController.selectSegment(segmented: __C.UISegmentedControl) -&gt; ()"
+                  moduleName = "Moproto"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josephblau/Developer/joeblau/src/moproto/Moproto/HUD/HUDObjectsViewController.swift"
+                  timestampString = "564865127.084602"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "55">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

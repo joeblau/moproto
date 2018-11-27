@@ -14,17 +14,18 @@ protocol HUDObjectsActionable {
 }
 
 class HUDObjectsViewController: UITableViewController {
-
-    let objects = ObjectFactory.build()
-    var actionable: HUDObjectsActionable?
+    
+    
+    let hudObjectsDataSource = HUDObjectsDataSource()
+    let hudDataSourcesDataSource = HUDDataSourcesDataSource()
+    
+    let segmentedControl =  UISegmentedControl(items: ["Objects", "Data"])
 
     init() {
         super.init(nibName: nil, bundle: nil)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
         tableView.dragInteractionEnabled = true
         tableView.delegate = self
-        tableView.dataSource = self
-        tableView.dragDelegate = self
 
         navigationItem.leftBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))]
         navigationItem.rightBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(play))]
@@ -36,19 +37,31 @@ class HUDObjectsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let sc =  UISegmentedControl(items: ["Objects"])
-        sc.selectedSegmentIndex = 0
-        navigationItem.titleView = sc
-
+        segmentedControl.addTarget(self, action: #selector(selectSegment(segmented:)), for: .valueChanged)
+        navigationItem.titleView = segmentedControl
+        segmentedControl.selectedSegmentIndex = 0
         view.backgroundColor = UIColor(named: "hud-background")
     }
 
     @objc func cancel() {
-        actionable?.dismiss()
+//        actionable?.dismiss()
     }
     
     @objc func play() {
-        actionable?.play()
+//        actionable?.play()
+    }
+    
+    @objc func selectSegment(segmented: UISegmentedControl) {
+        switch segmented.selectedSegmentIndex {
+        case 0:
+            tableView.dataSource = hudObjectsDataSource
+            tableView.dragDelegate = hudObjectsDataSource
+        case 1:
+            tableView.dataSource = hudDataSourcesDataSource
+            tableView.dragDelegate = hudDataSourcesDataSource
+        default: break
+        }
+        tableView.reloadData()
     }
     
     override var preferredScreenEdgesDeferringSystemGestures: UIRectEdge {

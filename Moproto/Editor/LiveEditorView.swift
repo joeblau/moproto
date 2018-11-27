@@ -22,6 +22,7 @@ class LiveEditorView: UIView {
         backgroundColor = .clear
         clipsToBounds = false
         translatesAutoresizingMaskIntoConstraints = false
+        contentMode = .redraw
     }
     
     required init?(coder aDecoder: NSCoder) {

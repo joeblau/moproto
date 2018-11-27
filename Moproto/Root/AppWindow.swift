@@ -9,14 +9,27 @@
 import UIKit
 import MobileCoreServices
 
+private let EDITOR_BUFFER: CGFloat = 12
+
 class AppWindow: UIWindow {
 
     fileprivate let hudObjects = HUDObjectsViewController()
     fileprivate let dashboardWindow = UIWindow(frame: UIScreen.main.bounds)
+    internal var currentView: UIView? = nil
+    internal var viewControllerTree: TreeNode<UIViewController>? = nil
+    internal var currentNode: TreeNode<UIViewController>? = nil
+    private var liveEdit: LiveEditorView?
+    
+    private var leadingConstraint: NSLayoutConstraint?
+    private var trailingConstraint: NSLayoutConstraint?
+    private var topConstraint: NSLayoutConstraint?
+    private var bottomConstraint: NSLayoutConstraint?
+    private var selectedEdge: UIRectEdge?
+    private var initialLocation: CGPoint = .zero
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        hudObjects.actionable = self
+//        hudObjects.actionable = self
         dashboardWindow.windowLevel = .statusBar
         let navController = UINavigationController(rootViewController: hudObjects)
         navController.navigationBar.barStyle = .blackTranslucent
@@ -47,22 +60,53 @@ class AppWindow: UIWindow {
         dashboardWindow.makeKeyAndVisible()
     }
     
-    @objc func didPan(recognizer: UIPanGestureRecognizer) {
-        
-    }
+//    @objc func didPan(recognizer: UIPanGestureRecognizer) {
+////        trailingConstraint?.constant = 100z        liveEdit?.bounds
+//        let currentLocation = recognizer.location(in: liveEdit)
+//        print(currentLocation)
+//        switch recognizer.state {
+//        case .began:
+//            initialLocation = currentLocation
+//            selectedEdge = .left
+//        case .changed:
+////            print("\(-EDITOR_BUFFER) : \(initialLocation.x) : \(currentLocation.x)")
+////            print(initialLocation.x + currentLocation.x)
+//            guard let selectedEdge = selectedEdge else { return }
+//            switch selectedEdge {
+//            case .left: leadingConstraint?.constant = -EDITOR_BUFFER - (initialLocation.x + currentLocation.x)
+////            case .right: trailingConstraint?.constant = EDITOR_BUFFER + initialLocation.x + currentLocation.x
+////            case .top: topConstraint?.constant = -EDITOR_BUFFER + initialLocation.y + currentLocation.y
+////            case .bottom: bottomConstraint?.constant = EDITOR_BUFFER + initialLocation.y + currentLocation.y
+//            default: break
+//            }
+////
+//        default: break
+//        }
+//    }
     
     @objc func didTap(recognizer: UITapGestureRecognizer) {
-
-        print(recognizer.view)
-        
-//            let lev = LiveEditorView(editable: view.editable)
-//        topView.addSubview(lev)
-//        lev.topAnchor.constraint(equalTo: view.topAnchor, constant: -EDITOR_BUFFER).isActive = true
-//        lev.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: EDITOR_BUFFER).isActive = true
-//        lev.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -EDITOR_BUFFER).isActive = true
-//        lev.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: EDITOR_BUFFER).isActive = true
+        if let liveEdit = self.liveEdit {
+            liveEdit.removeFromSuperview()
+            self.liveEdit = nil
+            return
+        }
+        guard let topView = currentView else { return }
+        let location = recognizer.location(in: currentView)
+        for view in topView.subviews {
+            let adjustedLocation = topView.convert(location, to: view)
+            
+            switch view {
+            case is UIButton where view.bounds.contains(adjustedLocation),
+                is UISegmentedControl where view.bounds.contains(adjustedLocation),
+                is UISlider where view.bounds.contains(adjustedLocation),
+                is UIStepper where view.bounds.contains(adjustedLocation),
+                is UISwitch where view.bounds.contains(adjustedLocation):
+                view.liveEditView.isHidden.toggle()
+                return
+            default: continue
+            }
+        }
     }
-    
 }
 
 extension AppWindow: HUDObjectsActionable {

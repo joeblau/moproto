@@ -27,10 +27,13 @@ extension AppWindow: UIDropInteractionDelegate {
             switch firstItem.className {
             case "UINavigationController":
                 let vc = WhiteViewController()
-                vc.title = "ChangeMe"
-                self.rootViewController = UINavigationController(rootViewController: vc)
+                vc.title = "Change Me"
+                let nvc = UINavigationController(rootViewController: vc)
+                self.addViewController(viewController: nvc)
 
             case "UITabBarController":
+                let tbc = UITabBarController()
+                tbc.view.backgroundColor = .white
                 let vc0 = WhiteViewController()
                 vc0.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.favorites, tag: 0)
                 let vc1 = WhiteViewController()
@@ -39,33 +42,46 @@ extension AppWindow: UIDropInteractionDelegate {
                 vc2.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.mostViewed, tag: 2)
                 let vc3 = WhiteViewController()
                 vc3.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.search, tag: 3)
-                
-                let tbc = UITabBarController()
-                tbc.view.backgroundColor = .white
                 tbc.viewControllers = [vc0, vc1, vc2, vc3]
+                self.addViewController(viewController: tbc)
+            case "UITableViewController":
+                let ds = UITableViewDesignersDataSource()
+                let tvc = DeferredTableViewController(dataSource: ds)
+                tvc.title = "Change Me"
+                self.addViewController(viewController: tvc)
                 
-                self.rootViewController = tbc
+            case "UIViewController":
+                let vc = WhiteViewController()
+                vc.title = "Change Me"
+                self.addViewController(viewController: vc)
 
             case "UIButton":
                 let b = UIButton(type: .system)
                 b.setTitle("Button", for: .normal)
+                b.isEnabled = false
                 self.addView(view: b, performDrop: session)
 
             case "UISegmentedControl":
                 let items = ["First", "Second", "Third"]
                 let sc = UISegmentedControl(items: items)
+                sc.isEnabled = false
                 self.addView(view: sc, performDrop: session)
 
             case "UISlider":
                 let s = UISlider()
                 s.widthAnchor.constraint(equalToConstant: 128).isActive = true
+                s.isEnabled = false
                 self.addView(view: s, performDrop: session)
             
             case "UIStepper":
-                self.addView(view: UIStepper(), performDrop: session)
+                let s = UIStepper()
+                s.isEnabled = false
+                self.addView(view: s, performDrop: session)
 
             case "UISwitch":
-                self.addView(view: UISwitch(), performDrop: session)
+                let s = UISwitch()
+                s.isEnabled = false
+                self.addView(view: s, performDrop: session)
                 
             case "UIActivityIndicatorView":
                 let ai = UIActivityIndicatorView(style: .gray)
@@ -75,6 +91,7 @@ extension AppWindow: UIDropInteractionDelegate {
             case "UILabel":
                 let l = UILabel()
                 l.text = "Label"
+                l.isEnabled = false
                 self.addView(view: l, performDrop: session)
                 
             case "UIProgressView":
@@ -89,8 +106,62 @@ extension AppWindow: UIDropInteractionDelegate {
         }
     }
     
+    private func addViewController(viewController: UIViewController) {
+
+        if rootViewController is InitialViewController {
+            viewControllerTree = TreeNode(value: viewController)
+            currentNode = viewControllerTree
+            
+            switch viewController {
+            case let nc as UINavigationController:
+                rootViewController = viewController
+                currentView = nc.topViewController?.view
+            case let tbc as UITabBarController:
+                rootViewController = viewController
+                currentView = tbc.viewControllers?.first?.view
+            case let tvc as UITableViewController:
+                rootViewController = UINavigationController(rootViewController: viewController)
+                currentView = tvc.view
+            default: break
+            }
+            return
+        }
+        
+//        if let vc = self.rootViewController {
+//            let ac = UIAlertController(title: "Transition", message: nil, preferredStyle: .actionSheet)
+//            ac.addAction(UIAlertAction(title: "Replace", style: .destructive)  { (action) in
+//                print("Replace")
+//            })
+//            ac.addAction(UIAlertAction(title: "Transition", style: .default) { (action) in
+//                self.viewControllerTree?.addChild(TreeNode(value: viewController))
+//                self.currentNode = self.viewControllerTree?.children.last
+//                switch vc {
+//                case let currentVC as UINavigationController:
+//                    currentVC.pushViewController(viewController, animated: true)
+//                default: break
+//                }
+//
+//            })
+//            ac.addAction(UIAlertAction(title: "Add", style: .default) { (action) in
+//                
+//            })
+//            let aCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//            ac.addAction(aCancel)
+//            vc.present(ac, animated: true, completion: nil)
+//        }
+        
+        
+    }
+    
     private func addView(view: UIView, performDrop session: UIDropSession) {
         view.translatesAutoresizingMaskIntoConstraints = false
+        let lev = view.liveEditView
+        view.addSubview(lev)
+        lev.topAnchor.constraint(equalTo: view.topAnchor, constant: -EDITOR_BUFFER).isActive = true
+        lev.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: EDITOR_BUFFER).isActive = true
+        lev.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -EDITOR_BUFFER).isActive = true
+        lev.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: EDITOR_BUFFER).isActive = true
+        
         if let topView = (self.rootViewController as? UINavigationController)?.topViewController?.view {
             topView.addSubview(view)
             let center = session.location(in: topView)

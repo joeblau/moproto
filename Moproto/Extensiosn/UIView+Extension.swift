@@ -25,4 +25,9 @@ extension UIView {
             return Editable(radius: .small, dimensions: .horizontalAndVertical)
         }
     }
+    
+    var liveEditView: LiveEditorView {
+        return subviews.filter { $0.isKind(of: LiveEditorView.self) }.first as? LiveEditorView ?? LiveEditorView(editable: editable)
+    }
 }
+
