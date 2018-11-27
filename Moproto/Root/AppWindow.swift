@@ -29,7 +29,7 @@ class AppWindow: UIWindow {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        hudObjects.actionable = self
+        hudObjects.actionable = self
         dashboardWindow.windowLevel = .statusBar
         let navController = UINavigationController(rootViewController: hudObjects)
         navController.navigationBar.barStyle = .blackTranslucent
@@ -110,9 +110,6 @@ class AppWindow: UIWindow {
 }
 
 extension AppWindow: HUDObjectsActionable {
-    func dismiss() {
-        dashboardWindow.isHidden = true
-    }
     
     func play() {
         // TODO:

@@ -14,7 +14,7 @@ extension HUDDataSourcesDataSource: UITableViewDragDelegate {
     }
     
     func tableView(_ tableView: UITableView, dragSessionWillBegin session: UIDragSession) {
-        //        actionable?.dismiss()
+        tableView.window?.isHidden = true
     }
     
     func tableView(_ tableView: UITableView, dragSessionIsRestrictedToDraggingApplication session: UIDragSession) -> Bool {

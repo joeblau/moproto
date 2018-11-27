@@ -92,7 +92,6 @@
 		E6C379EF213AD9790039D774 /* ViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379EE213AD9790039D774 /* ViewObject.swift */; };
 		E6C379F1213ADA770039D774 /* ContainerViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379F0213ADA770039D774 /* ContainerViewObject.swift */; };
 		E6C379F9213B6D8F0039D774 /* HUDObjectsDataSource+UITableViewDragDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379F8213B6D8F0039D774 /* HUDObjectsDataSource+UITableViewDragDelegate.swift */; };
-		E6C379FB213B6DDF0039D774 /* HUDObjectsViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379FA213B6DDF0039D774 /* HUDObjectsViewController+UITableViewDelegate.swift */; };
 		E6C37A02213B810D0039D774 /* MoprotoObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A01213B810D0039D774 /* MoprotoObjectType.swift */; };
 		E6C37A04213B8C700039D774 /* AppWindow+UIDropInteractionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A03213B8C700039D774 /* AppWindow+UIDropInteractionDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -164,7 +163,6 @@
 		E6C379EE213AD9790039D774 /* ViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewObject.swift; sourceTree = "<group>"; };
 		E6C379F0213ADA770039D774 /* ContainerViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewObject.swift; sourceTree = "<group>"; };
 		E6C379F8213B6D8F0039D774 /* HUDObjectsDataSource+UITableViewDragDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUDObjectsDataSource+UITableViewDragDelegate.swift"; sourceTree = "<group>"; };
-		E6C379FA213B6DDF0039D774 /* HUDObjectsViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUDObjectsViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		E6C37A01213B810D0039D774 /* MoprotoObjectType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoObjectType.swift; sourceTree = "<group>"; };
 		E6C37A03213B8C700039D774 /* AppWindow+UIDropInteractionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWindow+UIDropInteractionDelegate.swift"; sourceTree = "<group>"; };
 		E6C37A06213BF51E0039D774 /* TextViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewObject.swift; sourceTree = "<group>"; };
@@ -255,7 +253,6 @@
 				E6C379F8213B6D8F0039D774 /* HUDObjectsDataSource+UITableViewDragDelegate.swift */,
 				E68C6C1E21AB24980050E437 /* HUDDataSourcesDataSource.swift */,
 				E68C6C2021AB27C60050E437 /* HUDDataSourcesDataSource+UITableViewDragDelegate.swift */,
-				E6C379FA213B6DDF0039D774 /* HUDObjectsViewController+UITableViewDelegate.swift */,
 			);
 			path = HUD;
 			sourceTree = "<group>";
@@ -533,7 +530,6 @@
 				E676E272213BFAA300CA55D2 /* BarButtonItemFixedSpaceObject.swift in Sources */,
 				E607119B21A3879600C3BD2B /* WhiteViewController.swift in Sources */,
 				E66D72EC21A88F8900BBF38F /* TreeNode.swift in Sources */,
-				E6C379FB213B6DDF0039D774 /* HUDObjectsViewController+UITableViewDelegate.swift in Sources */,
 				E676E252213BF5B500CA55D2 /* CollectionReusableViewObject.swift in Sources */,
 				E676E260213BF5B500CA55D2 /* GlkitViewObject.swift in Sources */,
 				E676E268213BFAA300CA55D2 /* ScenekitViewObject.swift in Sources */,

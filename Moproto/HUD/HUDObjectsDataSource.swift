@@ -10,7 +10,6 @@ import UIKit
 
 class HUDObjectsDataSource: NSObject, UITableViewDataSource {
     let objects = ObjectFactory.build()
-    var actionable: HUDObjectsActionable?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objects.count

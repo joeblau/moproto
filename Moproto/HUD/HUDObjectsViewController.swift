@@ -9,18 +9,16 @@
 import UIKit
 
 protocol HUDObjectsActionable {
-    func dismiss()
     func play()
 }
 
 class HUDObjectsViewController: UITableViewController {
     
-    
     let hudObjectsDataSource = HUDObjectsDataSource()
     let hudDataSourcesDataSource = HUDDataSourcesDataSource()
-    
     let segmentedControl =  UISegmentedControl(items: ["Objects", "Data"])
-
+    var actionable: HUDObjectsActionable?
+    
     init() {
         super.init(nibName: nil, bundle: nil)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
@@ -41,31 +39,36 @@ class HUDObjectsViewController: UITableViewController {
         navigationItem.titleView = segmentedControl
         segmentedControl.selectedSegmentIndex = 0
         view.backgroundColor = UIColor(named: "hud-background")
+        updateDataSources()
     }
 
     @objc func cancel() {
-//        actionable?.dismiss()
+        self.view.window?.isHidden = true
     }
     
     @objc func play() {
-//        actionable?.play()
+        actionable?.play()
     }
     
     @objc func selectSegment(segmented: UISegmentedControl) {
-        switch segmented.selectedSegmentIndex {
-        case 0:
-            tableView.dataSource = hudObjectsDataSource
-            tableView.dragDelegate = hudObjectsDataSource
-        case 1:
-            tableView.dataSource = hudDataSourcesDataSource
-            tableView.dragDelegate = hudDataSourcesDataSource
-        default: break
-        }
-        tableView.reloadData()
+        updateDataSources()
     }
     
     override var preferredScreenEdgesDeferringSystemGestures: UIRectEdge {
         return .bottom
     }
     
+    private func updateDataSources() {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            tableView.dataSource = hudObjectsDataSource
+            tableView.dragDelegate = hudObjectsDataSource
+        case 1:
+            tableView.dataSource = hudDataSourcesDataSource
+            tableView.dragDelegate = hudDataSourcesDataSource
+            
+        default: break
+        }
+        tableView.reloadData()
+    }
 }

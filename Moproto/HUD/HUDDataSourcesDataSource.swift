@@ -10,7 +10,8 @@ import UIKit
 
 class HUDDataSourcesDataSource: NSObject, UITableViewDataSource {
     let dataSources = DataSourcesFactory.build()
-    
+    var actionable: HUDObjectsActionable?
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSources.count
     }
@@ -21,6 +22,7 @@ class HUDDataSourcesDataSource: NSObject, UITableViewDataSource {
         cell.textLabel?.textColor = UIColor.lightText
         cell.detailTextLabel?.text = dataSources[indexPath.row].description
         cell.detailTextLabel?.textColor = UIColor.lightText
+        cell.backgroundColor = UIColor(named: "cell-background")
         return cell
     }
     
