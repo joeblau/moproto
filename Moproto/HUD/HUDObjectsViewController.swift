@@ -8,16 +8,11 @@
 
 import UIKit
 
-protocol HUDObjectsActionable {
-    func play()
-}
-
 class HUDObjectsViewController: UITableViewController {
     
     let hudObjectsDataSource = HUDObjectsDataSource()
     let hudDataSourcesDataSource = HUDDataSourcesDataSource()
     let segmentedControl =  UISegmentedControl(items: ["Objects", "Data"])
-    var actionable: HUDObjectsActionable?
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -25,7 +20,6 @@ class HUDObjectsViewController: UITableViewController {
         tableView.dragInteractionEnabled = true
         
         navigationItem.leftBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))]
-        navigationItem.rightBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(play))]
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -43,10 +37,6 @@ class HUDObjectsViewController: UITableViewController {
 
     @objc func cancel() {
         self.view.window?.isHidden = true
-    }
-    
-    @objc func play() {
-        actionable?.play()
     }
     
     @objc func selectSegment(segmented: UISegmentedControl) {

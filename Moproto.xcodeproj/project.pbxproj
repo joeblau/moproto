@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E607119B21A3879600C3BD2B /* WhiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607119A21A3879600C3BD2B /* WhiteViewController.swift */; };
 		E631FBFA21B36F1D00AA8FB8 /* AppWindow+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631FBF921B36F1D00AA8FB8 /* AppWindow+TopViewController.swift */; };
-		E631FBFC21B36F7D00AA8FB8 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631FBFB21B36F7D00AA8FB8 /* UIViewController+Extensions.swift */; };
+		E631FBFE21B41BE900AA8FB8 /* MView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631FBFD21B41BE900AA8FB8 /* MView.swift */; };
 		E63C896E21B3426F0081B65A /* MoprotoViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C896D21B3426F0081B65A /* MoprotoViewControllerType.swift */; };
 		E63C897221B3578E0081B65A /* MoprotoViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C897121B3578E0081B65A /* MoprotoViewType.swift */; };
 		E63C897421B35A140081B65A /* MoprotoGestureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C897321B35A140081B65A /* MoprotoGestureType.swift */; };
@@ -117,7 +117,7 @@
 		E628F07B213BF589008F12E5 /* DatePickerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerObject.swift; sourceTree = "<group>"; };
 		E628F07C213BF58A008F12E5 /* TapGestureRecognizerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureRecognizerObject.swift; sourceTree = "<group>"; };
 		E631FBF921B36F1D00AA8FB8 /* AppWindow+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AppWindow+TopViewController.swift"; path = "../../../moproto/Moproto/Root/AppWindow+TopViewController.swift"; sourceTree = "<group>"; };
-		E631FBFB21B36F7D00AA8FB8 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "../../../moproto/Moproto/Extensiosn/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		E631FBFD21B41BE900AA8FB8 /* MView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MView.swift; path = ../../../moproto/Moproto/Editor/MView.swift; sourceTree = "<group>"; };
 		E63C896D21B3426F0081B65A /* MoprotoViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoViewControllerType.swift; sourceTree = "<group>"; };
 		E63C897121B3578E0081B65A /* MoprotoViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoViewType.swift; sourceTree = "<group>"; };
 		E63C897321B35A140081B65A /* MoprotoGestureType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoGestureType.swift; sourceTree = "<group>"; };
@@ -420,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				E67D469F21A55AF90000E7FA /* LiveEditorView.swift */,
+				E631FBFD21B41BE900AA8FB8 /* MView.swift */,
 			);
 			path = Editor;
 			sourceTree = "<group>";
@@ -461,7 +462,6 @@
 			children = (
 				E6C379E6213A30910039D774 /* String+Extensions.swift */,
 				E67D46A721A57CE50000E7FA /* UIView+Extension.swift */,
-				E631FBFB21B36F7D00AA8FB8 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensiosn;
 			sourceTree = "<group>";
@@ -553,7 +553,6 @@
 				E6807ABB21AE0EF2006F8C31 /* UIInitialControl.swift in Sources */,
 				E676E27B213BFAA300CA55D2 /* SpritekitViewObject.swift in Sources */,
 				E676E275213BFAA300CA55D2 /* MapKitViewObject.swift in Sources */,
-				E631FBFC21B36F7D00AA8FB8 /* UIViewController+Extensions.swift in Sources */,
 				E676E259213BF5B500CA55D2 /* LabelObject.swift in Sources */,
 				E676E256213BF5B500CA55D2 /* PickerViewObject.swift in Sources */,
 				E676E25C213BF5B500CA55D2 /* CollectionViewCellObject.swift in Sources */,
@@ -628,6 +627,7 @@
 				E676E252213BF5B500CA55D2 /* CollectionReusableViewObject.swift in Sources */,
 				E676E260213BF5B500CA55D2 /* GlkitViewObject.swift in Sources */,
 				E676E268213BFAA300CA55D2 /* ScenekitViewObject.swift in Sources */,
+				E631FBFE21B41BE900AA8FB8 /* MView.swift in Sources */,
 				E676E25E213BF5B500CA55D2 /* MetalkitViewObject.swift in Sources */,
 				E676E24C213BF5B500CA55D2 /* BarButtonItemFlexibleSpaceObject.swift in Sources */,
 				E6C37A02213B810D0039D774 /* MoprotoControlType.swift in Sources */,

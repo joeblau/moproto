@@ -15,9 +15,16 @@ private let EDITOR_BUFFER: CGFloat = 12
 extension AppWindow : UIDropInteractionDelegate {
     
     func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
-        switch topViewController {
-        case is InitialViewController:
-            return session.hasItemsConforming(toTypeIdentifiers: ["MoprotoViewControllerType"]) //&& session.items.count == 1
+        switch activeView {
+        case is MView:
+            return session.hasItemsConforming(toTypeIdentifiers: ["MoprotoControlType", "MoprotoViewType"])
+        case is UIButton,
+            is UISegmentedControl,
+            is UISlider,
+            is UIStepper,
+            is UISwitch,
+            is UIInitialControl:
+            return session.hasItemsConforming(toTypeIdentifiers: ["MoprotoViewControllerType"])
         default: return false
         }
     }
@@ -36,29 +43,24 @@ extension AppWindow : UIDropInteractionDelegate {
                 case "UIButton":
                     let b = UIButton(type: .system)
                     b.setTitle("Button", for: .normal)
-                    b.isEnabled = false
                     self.addView(view: b, performDrop: session)
                     
                 case "UISegmentedControl":
                     let items = ["First", "Second", "Third"]
                     let sc = UISegmentedControl(items: items)
-                    sc.isEnabled = false
                     self.addView(view: sc, performDrop: session)
                     
                 case "UISlider":
                     let s = UISlider()
                     s.widthAnchor.constraint(equalToConstant: 128).isActive = true
-                    s.isEnabled = false
                     self.addView(view: s, performDrop: session)
                     
                 case "UIStepper":
                     let s = UIStepper()
-                    s.isEnabled = false
                     self.addView(view: s, performDrop: session)
                     
                 case "UISwitch":
                     let s = UISwitch()
-                    s.isEnabled = false
                     self.addView(view: s, performDrop: session)
                     
                 case "UIActivityIndicatorView":
@@ -87,7 +89,7 @@ extension AppWindow : UIDropInteractionDelegate {
                 
                 switch firstItem.className {
                 case "UINavigationController":
-                    let vc = WhiteViewController()
+                    let vc = WhiteViewController(dropDelegate: self)
                     vc.title = "Change Me"
                     let nvc = UINavigationController(rootViewController: vc)
                     self.addViewController(viewController: nvc)
@@ -95,13 +97,13 @@ extension AppWindow : UIDropInteractionDelegate {
                 case "UITabBarController":
                     let tbc = UITabBarController()
                     tbc.view.backgroundColor = .white
-                    let vc0 = WhiteViewController()
+                    let vc0 = WhiteViewController(dropDelegate: self)
                     vc0.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.favorites, tag: 0)
-                    let vc1 = WhiteViewController()
+                    let vc1 = WhiteViewController(dropDelegate: self)
                     vc1.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.bookmarks, tag: 1)
-                    let vc2 = WhiteViewController()
+                    let vc2 = WhiteViewController(dropDelegate: self)
                     vc2.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.mostViewed, tag: 2)
-                    let vc3 = WhiteViewController()
+                    let vc3 = WhiteViewController(dropDelegate: self)
                     vc3.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.search, tag: 3)
                     tbc.viewControllers = [vc0, vc1, vc2, vc3]
                     self.addViewController(viewController: tbc)
@@ -113,7 +115,7 @@ extension AppWindow : UIDropInteractionDelegate {
                     self.addViewController(viewController: nc)
                     
                 case "UIViewController":
-                    let vc = WhiteViewController()
+                    let vc = WhiteViewController(dropDelegate: self)
                     vc.title = "Change Me"
                     self.addViewController(viewController: vc)
                     
@@ -128,7 +130,6 @@ extension AppWindow : UIDropInteractionDelegate {
                 case "UILabel":
                     let l = UILabel()
                     l.text = "Label"
-                    l.isEnabled = false
                     self.addView(view: l, performDrop: session)
                     
                 case "UIProgressView":
@@ -154,13 +155,11 @@ extension AppWindow : UIDropInteractionDelegate {
     
     private func addViewController(viewController: UIViewController) {
         
-        // Initial Case
         if rootViewController is InitialViewController {
             viewControllerTree = TreeNode(value: viewController)
             currentNode = viewControllerTree
-            
             rootViewController = viewController
-            currentView = topViewController?.view
+            setGestureRecoginzersToTopView()
             return
         }
         
@@ -191,26 +190,16 @@ extension AppWindow : UIDropInteractionDelegate {
     }
     
     private func addView(view: UIView, performDrop session: UIDropSession) {
-        //        view.translatesAutoresizingMaskIntoConstraints = false
-        //        let lev = view.liveEditView
-        //        view.addSubview(lev)
-        //        lev.topAnchor.constraint(equalTo: view.topAnchor, constant: -EDITOR_BUFFER).isActive = true
-        //        lev.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: EDITOR_BUFFER).isActive = true
-        //        lev.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -EDITOR_BUFFER).isActive = true
-        //        lev.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: EDITOR_BUFFER).isActive = true
-        //
-        //        if let topView = (self.rootViewController as? UINavigationController)?.topViewController?.view {
-        //            topView.addSubview(view)
-        //            let center = session.location(in: topView)
-        //            view.centerYAnchor.constraint(equalTo: topView.topAnchor, constant: center.y).isActive = true
-        //            view.centerXAnchor.constraint(equalTo: topView.leadingAnchor, constant: center.x).isActive = true
-        //        }
-        //        if let selectedIndex = (self.rootViewController as? UITabBarController)?.selectedIndex,
-        //            let topView = (self.rootViewController as? UITabBarController)?.viewControllers?[selectedIndex].view {
-        //            topView.addSubview(view)
-        //            let center = session.location(in: topView)
-        //            view.centerYAnchor.constraint(equalTo: topView.topAnchor, constant: center.y).isActive = true
-        //            view.centerXAnchor.constraint(equalTo: topView.leadingAnchor, constant: center.x).isActive = true
-        //        }
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.isUserInteractionEnabled = false
+        let dropInteraction = UIDropInteraction(delegate: self)
+        view.addInteraction(dropInteraction)
+
+        if let topView = topViewController?.view {
+            topView.addSubview(view)
+            let center = session.location(in: topView)
+            view.centerYAnchor.constraint(equalTo: topView.topAnchor, constant: center.y).isActive = true
+            view.centerXAnchor.constraint(equalTo: topView.leadingAnchor, constant: center.x).isActive = true
+        }
     }
 }

@@ -13,7 +13,9 @@ extension AppWindow {
         switch rootViewController {
         case is InitialViewController: return rootViewController
         case is UINavigationController: return (rootViewController as? UINavigationController)?.topViewController
-        case is UITabBarController: return (rootViewController as? UITabBarController)?.viewControllers?.first
+        case is UITabBarController:
+            guard let tabBarController = (rootViewController as? UITabBarController) else { return nil }
+            return tabBarController.viewControllers?[tabBarController.selectedIndex]
         default: return nil
         }
     }

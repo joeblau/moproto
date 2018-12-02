@@ -28,7 +28,7 @@ class LiveEditorView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+        
     fileprivate func renderHorizontalHandles(_ rect: CGRect) {
         let leftRectSize = CGRect(x: rect.origin.x, y: (rect.size.height/2) - (HANDLE_HEIGHT/2), width: HANDLE_WIDTH, height: HANDLE_HEIGHT)
         let leftHandle = UIBezierPath(roundedRect: leftRectSize, cornerRadius: HANDLE_WIDTH/2)

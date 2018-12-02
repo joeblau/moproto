@@ -13,6 +13,9 @@ private let EDITOR_BUFFER: CGFloat = 12
 extension UIView {
     var editable: Editable {
         switch self {
+        case is UIButton,
+             is UILabel:
+            return Editable(radius: .small, dimensions: .horizontalAndVertical)
         case is UISegmentedControl,
              is UIStepper:
             return Editable(radius: .medium, dimensions: .horizontal)

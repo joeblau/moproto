@@ -14,7 +14,7 @@ class DeferredTableViewController: UITableViewController {
         super.init(nibName: nil, bundle: nil)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
         tableView.dataSource = dataSource
-//        tableView.isScrollEnabled = false
+        tableView.isScrollEnabled = false
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -22,6 +22,6 @@ class DeferredTableViewController: UITableViewController {
     }
     
     override var preferredScreenEdgesDeferringSystemGestures: UIRectEdge {
-        return .bottom
+        return [.bottom, .top]
     }
 }
