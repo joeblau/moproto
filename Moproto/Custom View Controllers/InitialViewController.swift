@@ -30,8 +30,8 @@ class InitialViewController: UIViewController {
 
     fileprivate func configureViews() {
         view.addSubview(initialControl)
-        initialControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        initialControl.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        initialControl.centerXAnchor.constraint(equalTo: view.leadingAnchor, constant: view.center.x).isActive = true
+        initialControl.centerYAnchor.constraint(equalTo: view.topAnchor, constant: view.center.y).isActive = true
     }
     
     override var preferredScreenEdgesDeferringSystemGestures: UIRectEdge {

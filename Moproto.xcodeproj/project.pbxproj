@@ -10,6 +10,8 @@
 		E607119B21A3879600C3BD2B /* WhiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607119A21A3879600C3BD2B /* WhiteViewController.swift */; };
 		E631FBFA21B36F1D00AA8FB8 /* AppWindow+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631FBF921B36F1D00AA8FB8 /* AppWindow+TopViewController.swift */; };
 		E631FBFE21B41BE900AA8FB8 /* MView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631FBFD21B41BE900AA8FB8 /* MView.swift */; };
+		E631FC0021B4635F00AA8FB8 /* VerticalGuideShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631FBFF21B4635F00AA8FB8 /* VerticalGuideShapeLayer.swift */; };
+		E631FC0221B465FC00AA8FB8 /* HorizontalGuideShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631FC0121B465FC00AA8FB8 /* HorizontalGuideShapeLayer.swift */; };
 		E63C896E21B3426F0081B65A /* MoprotoViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C896D21B3426F0081B65A /* MoprotoViewControllerType.swift */; };
 		E63C897221B3578E0081B65A /* MoprotoViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C897121B3578E0081B65A /* MoprotoViewType.swift */; };
 		E63C897421B35A140081B65A /* MoprotoGestureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C897321B35A140081B65A /* MoprotoGestureType.swift */; };
@@ -118,6 +120,8 @@
 		E628F07C213BF58A008F12E5 /* TapGestureRecognizerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureRecognizerObject.swift; sourceTree = "<group>"; };
 		E631FBF921B36F1D00AA8FB8 /* AppWindow+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AppWindow+TopViewController.swift"; path = "../../../moproto/Moproto/Root/AppWindow+TopViewController.swift"; sourceTree = "<group>"; };
 		E631FBFD21B41BE900AA8FB8 /* MView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MView.swift; path = ../../../moproto/Moproto/Editor/MView.swift; sourceTree = "<group>"; };
+		E631FBFF21B4635F00AA8FB8 /* VerticalGuideShapeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VerticalGuideShapeLayer.swift; path = ../../../moproto/Moproto/Editor/VerticalGuideShapeLayer.swift; sourceTree = "<group>"; };
+		E631FC0121B465FC00AA8FB8 /* HorizontalGuideShapeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HorizontalGuideShapeLayer.swift; path = ../../../moproto/Moproto/Editor/HorizontalGuideShapeLayer.swift; sourceTree = "<group>"; };
 		E63C896D21B3426F0081B65A /* MoprotoViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoViewControllerType.swift; sourceTree = "<group>"; };
 		E63C897121B3578E0081B65A /* MoprotoViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoViewType.swift; sourceTree = "<group>"; };
 		E63C897321B35A140081B65A /* MoprotoGestureType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoGestureType.swift; sourceTree = "<group>"; };
@@ -421,6 +425,8 @@
 			children = (
 				E67D469F21A55AF90000E7FA /* LiveEditorView.swift */,
 				E631FBFD21B41BE900AA8FB8 /* MView.swift */,
+				E631FBFF21B4635F00AA8FB8 /* VerticalGuideShapeLayer.swift */,
+				E631FC0121B465FC00AA8FB8 /* HorizontalGuideShapeLayer.swift */,
 			);
 			path = Editor;
 			sourceTree = "<group>";
@@ -574,6 +580,7 @@
 				E676E25D213BF5B500CA55D2 /* VerticalStackViewObject.swift in Sources */,
 				E6C379E2213A2D910039D774 /* ObjectFactory.swift in Sources */,
 				E676E24A213BF5B500CA55D2 /* PinchGestureRecognizerObject.swift in Sources */,
+				E631FC0021B4635F00AA8FB8 /* VerticalGuideShapeLayer.swift in Sources */,
 				E6A94BE3213C0D09006442BB /* NavigationControllerObject.swift in Sources */,
 				E676E24D213BF5B500CA55D2 /* VisualEffectViewswithBlurandVibrancyObject.swift in Sources */,
 				E669EDA5213A058000710F5D /* AppWindow.swift in Sources */,
@@ -602,6 +609,7 @@
 				E676E255213BF5B500CA55D2 /* TabBarControllerObject.swift in Sources */,
 				E676E27F213BFAA300CA55D2 /* TabBarObject.swift in Sources */,
 				E631FBFA21B36F1D00AA8FB8 /* AppWindow+TopViewController.swift in Sources */,
+				E631FC0221B465FC00AA8FB8 /* HorizontalGuideShapeLayer.swift in Sources */,
 				E676E280213BFAA300CA55D2 /* TableViewCellObject.swift in Sources */,
 				E63C896E21B3426F0081B65A /* MoprotoViewControllerType.swift in Sources */,
 				E676E254213BF5B500CA55D2 /* ImageViewObject.swift in Sources */,

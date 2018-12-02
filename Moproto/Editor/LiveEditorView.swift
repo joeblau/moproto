@@ -32,24 +32,24 @@ class LiveEditorView: UIView {
     fileprivate func renderHorizontalHandles(_ rect: CGRect) {
         let leftRectSize = CGRect(x: rect.origin.x, y: (rect.size.height/2) - (HANDLE_HEIGHT/2), width: HANDLE_WIDTH, height: HANDLE_HEIGHT)
         let leftHandle = UIBezierPath(roundedRect: leftRectSize, cornerRadius: HANDLE_WIDTH/2)
-        self.tintColor.setFill()
+        UIColor(named: "edit-handle")?.setFill()
         leftHandle.fill()
         
         let rightRectSize = CGRect(x: rect.size.width - HANDLE_WIDTH, y: (rect.size.height/2) - (HANDLE_HEIGHT/2) , width: HANDLE_WIDTH, height: HANDLE_HEIGHT)
         let rightHandle = UIBezierPath(roundedRect: rightRectSize, cornerRadius: HANDLE_WIDTH/2)
-        self.tintColor.setFill()
+        UIColor(named: "edit-handle")?.setFill()
         rightHandle.fill()
     }
     
     fileprivate func renderVerticalHandles(_ rect: CGRect) {
         let topRectSize = CGRect(x: (rect.size.width/2) - (HANDLE_HEIGHT/2), y: rect.origin.y, width: HANDLE_HEIGHT, height: HANDLE_WIDTH)
         let topHandle = UIBezierPath(roundedRect: topRectSize, cornerRadius: HANDLE_WIDTH/2)
-        self.tintColor.setFill()
+        UIColor(named: "edit-handle")?.setFill()
         topHandle.fill()
         
         let bottomRectSize = CGRect(x: (rect.size.width/2) - (HANDLE_HEIGHT/2), y: rect.size.height - HANDLE_WIDTH, width: HANDLE_HEIGHT, height: HANDLE_WIDTH)
         let bottomHandle = UIBezierPath(roundedRect: bottomRectSize, cornerRadius: HANDLE_WIDTH/2)
-        self.tintColor.setFill()
+        UIColor(named: "edit-handle")?.setFill()
         bottomHandle.fill()
     }
     

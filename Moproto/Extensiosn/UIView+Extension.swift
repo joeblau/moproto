@@ -14,7 +14,8 @@ extension UIView {
     var editable: Editable {
         switch self {
         case is UIButton,
-             is UILabel:
+             is UILabel,
+             is UIImageView:
             return Editable(radius: .small, dimensions: .horizontalAndVertical)
         case is UISegmentedControl,
              is UIStepper:
@@ -43,6 +44,32 @@ extension UIView {
             return newLiveEditView
         }
         return existingLiveEditView
+    }
+    
+    func showVerticalCenterGuide() {
+        if nil == layer.sublayers?.filter({ $0.isKind(of: VerticalGuideShapeLayer.self) }).first {
+            let points = [CGPoint(x: center.x, y: 0),
+                          CGPoint(x: center.x, y: bounds.height)]
+            let lineLayer = VerticalGuideShapeLayer(points: points)
+            layer.insertSublayer(lineLayer, at: 1)
+        }
+    }
+    
+    func removeVerticalCenterGuide() {
+        layer.sublayers?.filter({ $0.isKind(of: VerticalGuideShapeLayer.self) }).first?.removeFromSuperlayer()
+    }
+    
+    func showHorizontalCenterGuide() {
+        if nil == layer.sublayers?.filter({ $0.isKind(of: HorizontalGuideShapeLayer.self) }).first {
+            let points = [CGPoint(x: 0, y: center.y),
+                          CGPoint(x: bounds.width, y: center.y)]
+            let lineLayer = HorizontalGuideShapeLayer(points: points)
+            layer.insertSublayer(lineLayer, at: 1)
+        }
+    }
+    
+    func removeHorizontalCenterGuide() {
+        layer.sublayers?.filter({ $0.isKind(of: HorizontalGuideShapeLayer.self) }).first?.removeFromSuperlayer()
     }
 }
 

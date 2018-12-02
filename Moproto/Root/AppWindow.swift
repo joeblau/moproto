@@ -10,7 +10,7 @@ import UIKit
 import MobileCoreServices
 
 private let EDITOR_BUFFER: CGFloat = 12
-
+private let SNAP_PIXEL_BUFFER: CGFloat = 6
 class AppWindow: UIWindow {
 
     fileprivate let hudObjects = HUDObjectsViewController()
@@ -50,32 +50,34 @@ class AppWindow: UIWindow {
     }
     
     @objc func didPan(recognizer: UIPanGestureRecognizer) {
-////        trailingConstraint?.constant = 100z        liveEdit?.bounds
-//        let currentLocation = recognizer.location(in: liveEdit)
-//        print(currentLocation)
-//        switch recognizer.state {
-//        case .began:
-//            initialLocation = currentLocation
-//            selectedEdge = .left
-//        case .changed:
-////            print("\(-EDITOR_BUFFER) : \(initialLocation.x) : \(currentLocation.x)")
-////            print(initialLocation.x + currentLocation.x)
-//            guard let selectedEdge = selectedEdge else { return }
-//            switch selectedEdge {
-//            case .left: leadingConstraint?.constant = -EDITOR_BUFFER - (initialLocation.x + currentLocation.x)
-////            case .right: trailingConstraint?.constant = EDITOR_BUFFER + initialLocation.x + currentLocation.x
-////            case .top: topConstraint?.constant = -EDITOR_BUFFER + initialLocation.y + currentLocation.y
-////            case .bottom: bottomConstraint?.constant = EDITOR_BUFFER + initialLocation.y + currentLocation.y
-//            default: break
-//            }
-////
-//        default: break
-//        }
+        guard let topView = topViewController?.view else { return }
+        let location = recognizer.location(in: topView)
+        
+        let activeViewConstraints = topView.constraints.filter { $0.firstItem?.isEqual(activeView) ?? false }
+        guard let centerX = activeViewConstraints.filter({ $0.firstAttribute == .centerX }).first,
+            let centerY = activeViewConstraints.filter({ $0.firstAttribute == .centerY }).first else { return }
+        
+        if (abs(location.x-topView.center.x) <= SNAP_PIXEL_BUFFER) {
+            centerX.constant = topView.center.x
+            showVerticalCenterGuide()
+        } else {
+            centerX.constant = location.x
+            removeVerticalCenterGuide()
+        }
+        
+        if (abs(location.y-topView.center.y) < SNAP_PIXEL_BUFFER) {
+            centerY.constant = topView.center.y
+            showHorizontalCenterGuide()
+        } else {
+            centerY.constant = location.y
+            removeHorizontalCenterGuide()
+        }
     }
     
     @objc func didTap(recognizer: UITapGestureRecognizer) {
         guard let topView = topViewController?.view else { return }
         let location = recognizer.location(in: topView)
+        var isAnyControlActive = false
         for currentView in topView.subviews {
             let adjustedLocation = topView.convert(location, to: currentView)
             switch currentView {
@@ -84,38 +86,39 @@ class AppWindow: UIWindow {
                 is UISlider where currentView.bounds.contains(adjustedLocation),
                 is UIStepper where currentView.bounds.contains(adjustedLocation),
                 is UISwitch where currentView.bounds.contains(adjustedLocation),
-                is UIInitialControl where currentView.bounds.contains(adjustedLocation):
+                is UIInitialControl where currentView.bounds.contains(adjustedLocation),
+                is UIImageView where currentView.bounds.contains(adjustedLocation),
+                is UILabel where currentView.bounds.contains(adjustedLocation):
                 currentView.liveEditView.isHidden.toggle()
                 switch currentView.liveEditView.isHidden {
                 case true:
                     activeView = topView
                     currentView.liveEditView.removeGestureRecognizer(pan)
+                    removeAllGuides()
                 case false:
+                    isAnyControlActive = true
                     activeView = currentView
                     currentView.liveEditView.addGestureRecognizer(pan)
-
                 }
-                
-                
-                activeView = currentView.liveEditView.isHidden ? topView : currentView
             default: currentView.liveEditView.isHidden = true
             }
+            currentView.isUserInteractionEnabled = !currentView.liveEditView.isHidden
+        }
+        if !isAnyControlActive {
+            activeView = topView
+            removeAllGuides()
         }
     }
-    
-//    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-//        let hitView = super.hitTest(point, with: event)
-//
-//        if hitView!.isKind(of: UIButton.self ) {
-//            return nil
-//        }
-//        return hitView
-//    }
     
     internal func setGestureRecoginzersToTopView() {
         guard let topView = topViewController?.view else { return }
         activeView = topView
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTap(recognizer:)))
         topViewController?.view.addGestureRecognizer(tap)
+    }
+    
+    private func removeAllGuides() {
+        removeVerticalCenterGuide()
+        removeHorizontalCenterGuide()
     }
 }

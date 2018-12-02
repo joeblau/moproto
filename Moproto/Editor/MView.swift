@@ -9,6 +9,7 @@
 import UIKit
 
 class MView: UIView {
+    
     init() {
         super.init(frame: .zero)
         backgroundColor = .white

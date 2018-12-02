@@ -138,6 +138,15 @@ extension AppWindow : UIDropInteractionDelegate {
                     p.widthAnchor.constraint(equalToConstant: 128).isActive = true
                     self.addView(view: p, performDrop: session)
                     
+                case "UIImageView":
+                    let i = UIImageView(image: UIImage(named: "placeholder-image"))
+                    i.tintColor = .lightGray
+                    i.contentMode = .center
+                    i.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
+                    i.heightAnchor.constraint(equalToConstant: 128).isActive = true
+                    i.widthAnchor.constraint(equalToConstant: 128).isActive = true
+                    self.addView(view: i, performDrop: session)
+                    
                 default: print("no op")
                 }
             }

@@ -10,7 +10,7 @@ import UIKit
 
 class UIInitialControl: UIControl {
 
-    private let imageView = UIImageView(image: UIImage(named: "initialize"))
+    private let imageView = UIImageView(image: UIImage(named: "add"))
     
     init() {
         super.init(frame: .zero)
