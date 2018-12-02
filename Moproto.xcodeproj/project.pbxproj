@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E602EF1B21B21ECD00CB7BB2 /* UIControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E602EF1A21B21ECD00CB7BB2 /* UIControl+Extensions.swift */; };
 		E607119B21A3879600C3BD2B /* WhiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607119A21A3879600C3BD2B /* WhiteViewController.swift */; };
+		E63C896E21B3426F0081B65A /* MoprotoViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C896D21B3426F0081B65A /* MoprotoViewControllerType.swift */; };
+		E63C897221B3578E0081B65A /* MoprotoViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C897121B3578E0081B65A /* MoprotoViewType.swift */; };
+		E63C897421B35A140081B65A /* MoprotoGestureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C897321B35A140081B65A /* MoprotoGestureType.swift */; };
+		E63C897A21B35A9B0081B65A /* MoprotoUnusedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C897921B35A9B0081B65A /* MoprotoUnusedType.swift */; };
+		E63C897F21B360790081B65A /* MoprotoDataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C897E21B360790081B65A /* MoprotoDataSourceType.swift */; };
 		E6662E37213C1232007AAFDF /* StoryboardReferenceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6662E36213C1232007AAFDF /* StoryboardReferenceObject.swift */; };
 		E669ED92213A014E00710F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669ED91213A014E00710F5D /* AppDelegate.swift */; };
 		E669ED94213A014E00710F5D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669ED93213A014E00710F5D /* InitialViewController.swift */; };
@@ -76,6 +82,7 @@
 		E67D46A021A55AF90000E7FA /* LiveEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D469F21A55AF90000E7FA /* LiveEditorView.swift */; };
 		E67D46A621A57A350000E7FA /* Editable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D46A521A57A350000E7FA /* Editable.swift */; };
 		E67D46A821A57CE50000E7FA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D46A721A57CE50000E7FA /* UIView+Extension.swift */; };
+		E6807ABB21AE0EF2006F8C31 /* UIInitialControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6807ABA21AE0EF2006F8C31 /* UIInitialControl.swift */; };
 		E68C6C1721AB0C370050E437 /* UITableViewDataSource+Designers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68C6C1621AB0C370050E437 /* UITableViewDataSource+Designers.swift */; };
 		E68C6C1A21AB104F0050E437 /* DeferredTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68C6C1921AB104F0050E437 /* DeferredTableViewController.swift */; };
 		E68C6C1D21AB121B0050E437 /* DataSourcesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68C6C1C21AB121B0050E437 /* DataSourcesFactory.swift */; };
@@ -92,11 +99,12 @@
 		E6C379EF213AD9790039D774 /* ViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379EE213AD9790039D774 /* ViewObject.swift */; };
 		E6C379F1213ADA770039D774 /* ContainerViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379F0213ADA770039D774 /* ContainerViewObject.swift */; };
 		E6C379F9213B6D8F0039D774 /* HUDObjectsDataSource+UITableViewDragDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C379F8213B6D8F0039D774 /* HUDObjectsDataSource+UITableViewDragDelegate.swift */; };
-		E6C37A02213B810D0039D774 /* MoprotoObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A01213B810D0039D774 /* MoprotoObjectType.swift */; };
+		E6C37A02213B810D0039D774 /* MoprotoControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A01213B810D0039D774 /* MoprotoControlType.swift */; };
 		E6C37A04213B8C700039D774 /* AppWindow+UIDropInteractionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C37A03213B8C700039D774 /* AppWindow+UIDropInteractionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E602EF1A21B21ECD00CB7BB2 /* UIControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extensions.swift"; sourceTree = "<group>"; };
 		E607119A21A3879600C3BD2B /* WhiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteViewController.swift; sourceTree = "<group>"; };
 		E628F073213BF588008F12E5 /* SearchBarandSearchDisplayControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarandSearchDisplayControllerObject.swift; sourceTree = "<group>"; };
 		E628F074213BF589008F12E5 /* ObjectObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectObject.swift; sourceTree = "<group>"; };
@@ -108,6 +116,11 @@
 		E628F07A213BF589008F12E5 /* CollectionViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewObject.swift; sourceTree = "<group>"; };
 		E628F07B213BF589008F12E5 /* DatePickerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerObject.swift; sourceTree = "<group>"; };
 		E628F07C213BF58A008F12E5 /* TapGestureRecognizerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureRecognizerObject.swift; sourceTree = "<group>"; };
+		E63C896D21B3426F0081B65A /* MoprotoViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoViewControllerType.swift; sourceTree = "<group>"; };
+		E63C897121B3578E0081B65A /* MoprotoViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoViewType.swift; sourceTree = "<group>"; };
+		E63C897321B35A140081B65A /* MoprotoGestureType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoGestureType.swift; sourceTree = "<group>"; };
+		E63C897921B35A9B0081B65A /* MoprotoUnusedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoUnusedType.swift; sourceTree = "<group>"; };
+		E63C897E21B360790081B65A /* MoprotoDataSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoDataSourceType.swift; sourceTree = "<group>"; };
 		E6662E36213C1232007AAFDF /* StoryboardReferenceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardReferenceObject.swift; sourceTree = "<group>"; };
 		E669ED8E213A014E00710F5D /* Moproto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moproto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E669ED91213A014E00710F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +160,7 @@
 		E67D469F21A55AF90000E7FA /* LiveEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEditorView.swift; sourceTree = "<group>"; };
 		E67D46A521A57A350000E7FA /* Editable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editable.swift; sourceTree = "<group>"; };
 		E67D46A721A57CE50000E7FA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E6807ABA21AE0EF2006F8C31 /* UIInitialControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInitialControl.swift; sourceTree = "<group>"; };
 		E68C6C1621AB0C370050E437 /* UITableViewDataSource+Designers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewDataSource+Designers.swift"; sourceTree = "<group>"; };
 		E68C6C1921AB104F0050E437 /* DeferredTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredTableViewController.swift; sourceTree = "<group>"; };
 		E68C6C1C21AB121B0050E437 /* DataSourcesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourcesFactory.swift; sourceTree = "<group>"; };
@@ -163,7 +177,7 @@
 		E6C379EE213AD9790039D774 /* ViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewObject.swift; sourceTree = "<group>"; };
 		E6C379F0213ADA770039D774 /* ContainerViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewObject.swift; sourceTree = "<group>"; };
 		E6C379F8213B6D8F0039D774 /* HUDObjectsDataSource+UITableViewDragDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUDObjectsDataSource+UITableViewDragDelegate.swift"; sourceTree = "<group>"; };
-		E6C37A01213B810D0039D774 /* MoprotoObjectType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoObjectType.swift; sourceTree = "<group>"; };
+		E6C37A01213B810D0039D774 /* MoprotoControlType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoControlType.swift; sourceTree = "<group>"; };
 		E6C37A03213B8C700039D774 /* AppWindow+UIDropInteractionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWindow+UIDropInteractionDelegate.swift"; sourceTree = "<group>"; };
 		E6C37A06213BF51E0039D774 /* TextViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewObject.swift; sourceTree = "<group>"; };
 		E6C37A08213BF51F0039D774 /* BarButtonItemFixedSpaceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemFixedSpaceObject.swift; sourceTree = "<group>"; };
@@ -199,6 +213,140 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E631FBF821B366B900AA8FB8 /* Concreate */ = {
+			isa = PBXGroup;
+			children = (
+				E68C6C1621AB0C370050E437 /* UITableViewDataSource+Designers.swift */,
+			);
+			path = Concreate;
+			sourceTree = "<group>";
+		};
+		E63C896921B33F500081B65A /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				E6807ABA21AE0EF2006F8C31 /* UIInitialControl.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		E63C896A21B341E80081B65A /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				E6C37A01213B810D0039D774 /* MoprotoControlType.swift */,
+				E63C896D21B3426F0081B65A /* MoprotoViewControllerType.swift */,
+				E63C897121B3578E0081B65A /* MoprotoViewType.swift */,
+				E63C897321B35A140081B65A /* MoprotoGestureType.swift */,
+				E63C897921B35A9B0081B65A /* MoprotoUnusedType.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		E63C897521B35A510081B65A /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				E6A94BE0213C0CF0006442BB /* ButtonObject.swift */,
+				E676E238213BF5B200CA55D2 /* SegmentedControlObject.swift */,
+				E6C37A18213BF5200039D774 /* SwitchObject.swift */,
+				E628F077213BF589008F12E5 /* SliderObject.swift */,
+				E6C37A0A213BF51F0039D774 /* ActivityIndicatorViewObject.swift */,
+				E6C37A0B213BF51F0039D774 /* ProgressViewObject.swift */,
+				E676E241213BF5B400CA55D2 /* PageControlObject.swift */,
+				E676E23A213BF5B300CA55D2 /* StepperObject.swift */,
+				E628F07B213BF589008F12E5 /* DatePickerObject.swift */,
+				E676E23D213BF5B300CA55D2 /* PickerViewObject.swift */,
+				E6C37A19213BF5200039D774 /* NavigationBarObject.swift */,
+				E676E237213BF5B200CA55D2 /* NavigationItemObject.swift */,
+				E676E23E213BF5B300CA55D2 /* ToolbarObject.swift */,
+				E676E23F213BF5B300CA55D2 /* BarButtonItemObject.swift */,
+				E6C37A12213BF5200039D774 /* TabBarObject.swift */,
+				E6C37A10213BF51F0039D774 /* TabBarItemObject.swift */,
+				E6C37A16213BF5200039D774 /* SearchBarObject.swift */,
+				E628F073213BF588008F12E5 /* SearchBarandSearchDisplayControllerObject.swift */,
+				E676E233213BF5B200CA55D2 /* BarButtonItemFlexibleSpaceObject.swift */,
+				E6C37A08213BF51F0039D774 /* BarButtonItemFixedSpaceObject.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		E63C897721B35A670081B65A /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E6C379E8213AB2FE0039D774 /* ViewControllerObject.swift */,
+				E6A94BE2213C0D09006442BB /* NavigationControllerObject.swift */,
+				E6C379EC213AB40E0039D774 /* TableViewControllerObject.swift */,
+				E6C37A17213BF5200039D774 /* CollectionViewControllerObject.swift */,
+				E676E23C213BF5B300CA55D2 /* TabBarControllerObject.swift */,
+				E628F078213BF589008F12E5 /* SplitViewControllerObject.swift */,
+				E676E246213BF5B400CA55D2 /* PageViewControllerObject.swift */,
+				E6C37A0D213BF51F0039D774 /* GlkitViewControllerObject.swift */,
+				E6C37A14213BF5200039D774 /* AvkitPlayerViewControllerObject.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		E63C897821B35A6D0081B65A /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				E628F07C213BF58A008F12E5 /* TapGestureRecognizerObject.swift */,
+				E676E231213BF5B100CA55D2 /* PinchGestureRecognizerObject.swift */,
+				E6C37A1C213BF5210039D774 /* RotationGestureRecognizerObject.swift */,
+				E6C37A0E213BF51F0039D774 /* SwipeGestureRecognizerObject.swift */,
+				E676E230213BF5B100CA55D2 /* PanGestureRecognizerObject.swift */,
+				E676E235213BF5B200CA55D2 /* ScreenEdgePanGestureRecognizerObject.swift */,
+				E6C37A1E213BF5210039D774 /* LongPressGestureRecognizerObject.swift */,
+				E6C37A0F213BF51F0039D774 /* CustomGestureRecognizerObject.swift */,
+			);
+			path = Gesture;
+			sourceTree = "<group>";
+		};
+		E63C897B21B35AB90081B65A /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				E6662E36213C1232007AAFDF /* StoryboardReferenceObject.swift */,
+				E628F074213BF589008F12E5 /* ObjectObject.swift */,
+			);
+			path = Unused;
+			sourceTree = "<group>";
+		};
+		E63C897C21B35C010081B65A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E676E240213BF5B300CA55D2 /* LabelObject.swift */,
+				E676E242213BF5B400CA55D2 /* TextFieldObject.swift */,
+				E628F075213BF589008F12E5 /* HorizontalStackViewObject.swift */,
+				E676E244213BF5B400CA55D2 /* VerticalStackViewObject.swift */,
+				E676E236213BF5B200CA55D2 /* TableViewObject.swift */,
+				E6C37A1A213BF5200039D774 /* TableViewCellObject.swift */,
+				E676E23B213BF5B300CA55D2 /* ImageViewObject.swift */,
+				E628F07A213BF589008F12E5 /* CollectionViewObject.swift */,
+				E676E243213BF5B400CA55D2 /* CollectionViewCellObject.swift */,
+				E676E239213BF5B300CA55D2 /* CollectionReusableViewObject.swift */,
+				E6C37A06213BF51E0039D774 /* TextViewObject.swift */,
+				E6C37A15213BF5200039D774 /* ScrollViewObject.swift */,
+				E628F076213BF589008F12E5 /* VisualEffectViewwithBlurObject.swift */,
+				E676E234213BF5B200CA55D2 /* VisualEffectViewswithBlurandVibrancyObject.swift */,
+				E6C37A1D213BF5210039D774 /* MapKitViewObject.swift */,
+				E676E245213BF5B400CA55D2 /* MetalkitViewObject.swift */,
+				E676E247213BF5B400CA55D2 /* GlkitViewObject.swift */,
+				E628F079213BF589008F12E5 /* ScenekitViewObject.swift */,
+				E6C37A0C213BF51F0039D774 /* SpritekitViewObject.swift */,
+				E6C37A09213BF51F0039D774 /* ArkitScenekitViewObject.swift */,
+				E676E248213BF5B400CA55D2 /* ArkitSpritekitViewObject.swift */,
+				E676E232213BF5B200CA55D2 /* WebkitViewObject.swift */,
+				E6C379EE213AD9790039D774 /* ViewObject.swift */,
+				E6C379F0213ADA770039D774 /* ContainerViewObject.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E63C897D21B35FCD0081B65A /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				E63C897E21B360790081B65A /* MoprotoDataSourceType.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		E669ED85213A014D00710F5D = {
 			isa = PBXGroup;
 			children = (
@@ -220,7 +368,6 @@
 			isa = PBXGroup;
 			children = (
 				E68C6C1821AB102F0050E437 /* Custom View Controllers */,
-				E68C6C1521AB07D50050E437 /* Data Sources */,
 				E66D72EA21A88F7500BBF38F /* Data Structures */,
 				E67D469E21A55ADA0000E7FA /* Editor */,
 				E6C379E5213A30800039D774 /* Extensiosn */,
@@ -248,6 +395,7 @@
 			children = (
 				E68C6C1B21AB11ED0050E437 /* Data Sources */,
 				E6C379DD213A2D1D0039D774 /* Objects */,
+				E6C379DE213A2D2B0039D774 /* HUDItem.swift */,
 				E669EDA7213A084900710F5D /* HUDObjectsViewController.swift */,
 				E669EDAB213A0FC000710F5D /* HUDObjectsDataSource.swift */,
 				E6C379F8213B6D8F0039D774 /* HUDObjectsDataSource+UITableViewDragDelegate.swift */,
@@ -273,13 +421,6 @@
 			path = Editor;
 			sourceTree = "<group>";
 		};
-		E68C6C1521AB07D50050E437 /* Data Sources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Data Sources";
-			sourceTree = "<group>";
-		};
 		E68C6C1821AB102F0050E437 /* Custom View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,7 +434,8 @@
 		E68C6C1B21AB11ED0050E437 /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E68C6C1621AB0C370050E437 /* UITableViewDataSource+Designers.swift */,
+				E631FBF821B366B900AA8FB8 /* Concreate */,
+				E63C897D21B35FCD0081B65A /* Types */,
 				E68C6C1C21AB121B0050E437 /* DataSourcesFactory.swift */,
 			);
 			path = "Data Sources";
@@ -302,9 +444,9 @@
 		E6C379DD213A2D1D0039D774 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				E63C896A21B341E80081B65A /* Types */,
+				E63C896921B33F500081B65A /* Custom */,
 				E6C37A05213BF3180039D774 /* Concrete */,
-				E6C37A01213B810D0039D774 /* MoprotoObjectType.swift */,
-				E6C379DE213A2D2B0039D774 /* HUDItem.swift */,
 				E6C379E1213A2D910039D774 /* ObjectFactory.swift */,
 				E67D46A521A57A350000E7FA /* Editable.swift */,
 			);
@@ -316,6 +458,7 @@
 			children = (
 				E6C379E6213A30910039D774 /* String+Extensions.swift */,
 				E67D46A721A57CE50000E7FA /* UIView+Extension.swift */,
+				E602EF1A21B21ECD00CB7BB2 /* UIControl+Extensions.swift */,
 			);
 			path = Extensiosn;
 			sourceTree = "<group>";
@@ -323,69 +466,11 @@
 		E6C37A05213BF3180039D774 /* Concrete */ = {
 			isa = PBXGroup;
 			children = (
-				E6C379E8213AB2FE0039D774 /* ViewControllerObject.swift */,
-				E6662E36213C1232007AAFDF /* StoryboardReferenceObject.swift */,
-				E6A94BE2213C0D09006442BB /* NavigationControllerObject.swift */,
-				E6C379EC213AB40E0039D774 /* TableViewControllerObject.swift */,
-				E6C37A17213BF5200039D774 /* CollectionViewControllerObject.swift */,
-				E676E23C213BF5B300CA55D2 /* TabBarControllerObject.swift */,
-				E628F078213BF589008F12E5 /* SplitViewControllerObject.swift */,
-				E676E246213BF5B400CA55D2 /* PageViewControllerObject.swift */,
-				E6C37A0D213BF51F0039D774 /* GlkitViewControllerObject.swift */,
-				E6C37A14213BF5200039D774 /* AvkitPlayerViewControllerObject.swift */,
-				E628F074213BF589008F12E5 /* ObjectObject.swift */,
-				E676E240213BF5B300CA55D2 /* LabelObject.swift */,
-				E6A94BE0213C0CF0006442BB /* ButtonObject.swift */,
-				E676E238213BF5B200CA55D2 /* SegmentedControlObject.swift */,
-				E676E242213BF5B400CA55D2 /* TextFieldObject.swift */,
-				E628F077213BF589008F12E5 /* SliderObject.swift */,
-				E6C37A18213BF5200039D774 /* SwitchObject.swift */,
-				E6C37A0A213BF51F0039D774 /* ActivityIndicatorViewObject.swift */,
-				E6C37A0B213BF51F0039D774 /* ProgressViewObject.swift */,
-				E676E241213BF5B400CA55D2 /* PageControlObject.swift */,
-				E676E23A213BF5B300CA55D2 /* StepperObject.swift */,
-				E628F075213BF589008F12E5 /* HorizontalStackViewObject.swift */,
-				E676E244213BF5B400CA55D2 /* VerticalStackViewObject.swift */,
-				E676E236213BF5B200CA55D2 /* TableViewObject.swift */,
-				E6C37A1A213BF5200039D774 /* TableViewCellObject.swift */,
-				E676E23B213BF5B300CA55D2 /* ImageViewObject.swift */,
-				E628F07A213BF589008F12E5 /* CollectionViewObject.swift */,
-				E676E243213BF5B400CA55D2 /* CollectionViewCellObject.swift */,
-				E676E239213BF5B300CA55D2 /* CollectionReusableViewObject.swift */,
-				E6C37A06213BF51E0039D774 /* TextViewObject.swift */,
-				E6C37A15213BF5200039D774 /* ScrollViewObject.swift */,
-				E628F07B213BF589008F12E5 /* DatePickerObject.swift */,
-				E676E23D213BF5B300CA55D2 /* PickerViewObject.swift */,
-				E628F076213BF589008F12E5 /* VisualEffectViewwithBlurObject.swift */,
-				E676E234213BF5B200CA55D2 /* VisualEffectViewswithBlurandVibrancyObject.swift */,
-				E6C37A1D213BF5210039D774 /* MapKitViewObject.swift */,
-				E676E245213BF5B400CA55D2 /* MetalkitViewObject.swift */,
-				E676E247213BF5B400CA55D2 /* GlkitViewObject.swift */,
-				E628F079213BF589008F12E5 /* ScenekitViewObject.swift */,
-				E6C37A0C213BF51F0039D774 /* SpritekitViewObject.swift */,
-				E6C37A09213BF51F0039D774 /* ArkitScenekitViewObject.swift */,
-				E676E248213BF5B400CA55D2 /* ArkitSpritekitViewObject.swift */,
-				E676E232213BF5B200CA55D2 /* WebkitViewObject.swift */,
-				E628F07C213BF58A008F12E5 /* TapGestureRecognizerObject.swift */,
-				E676E231213BF5B100CA55D2 /* PinchGestureRecognizerObject.swift */,
-				E6C37A1C213BF5210039D774 /* RotationGestureRecognizerObject.swift */,
-				E6C37A0E213BF51F0039D774 /* SwipeGestureRecognizerObject.swift */,
-				E676E230213BF5B100CA55D2 /* PanGestureRecognizerObject.swift */,
-				E676E235213BF5B200CA55D2 /* ScreenEdgePanGestureRecognizerObject.swift */,
-				E6C37A1E213BF5210039D774 /* LongPressGestureRecognizerObject.swift */,
-				E6C37A0F213BF51F0039D774 /* CustomGestureRecognizerObject.swift */,
-				E6C37A19213BF5200039D774 /* NavigationBarObject.swift */,
-				E676E237213BF5B200CA55D2 /* NavigationItemObject.swift */,
-				E676E23E213BF5B300CA55D2 /* ToolbarObject.swift */,
-				E676E23F213BF5B300CA55D2 /* BarButtonItemObject.swift */,
-				E6C37A12213BF5200039D774 /* TabBarObject.swift */,
-				E6C37A10213BF51F0039D774 /* TabBarItemObject.swift */,
-				E6C37A16213BF5200039D774 /* SearchBarObject.swift */,
-				E628F073213BF588008F12E5 /* SearchBarandSearchDisplayControllerObject.swift */,
-				E676E233213BF5B200CA55D2 /* BarButtonItemFlexibleSpaceObject.swift */,
-				E6C37A08213BF51F0039D774 /* BarButtonItemFixedSpaceObject.swift */,
-				E6C379EE213AD9790039D774 /* ViewObject.swift */,
-				E6C379F0213ADA770039D774 /* ContainerViewObject.swift */,
+				E63C897C21B35C010081B65A /* View */,
+				E63C897B21B35AB90081B65A /* Unused */,
+				E63C897821B35A6D0081B65A /* Gesture */,
+				E63C897721B35A670081B65A /* View Controller */,
+				E63C897521B35A510081B65A /* Control */,
 			);
 			path = Concrete;
 			sourceTree = "<group>";
@@ -462,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E669ED94213A014E00710F5D /* InitialViewController.swift in Sources */,
+				E6807ABB21AE0EF2006F8C31 /* UIInitialControl.swift in Sources */,
 				E676E27B213BFAA300CA55D2 /* SpritekitViewObject.swift in Sources */,
 				E676E275213BFAA300CA55D2 /* MapKitViewObject.swift in Sources */,
 				E676E259213BF5B500CA55D2 /* LabelObject.swift in Sources */,
@@ -498,6 +584,7 @@
 				E676E271213BFAA300CA55D2 /* CustomGestureRecognizerObject.swift in Sources */,
 				E6C379EF213AD9790039D774 /* ViewObject.swift in Sources */,
 				E6C379E7213A30910039D774 /* String+Extensions.swift in Sources */,
+				E63C897421B35A140081B65A /* MoprotoGestureType.swift in Sources */,
 				E68C6C1A21AB104F0050E437 /* DeferredTableViewController.swift in Sources */,
 				E676E25F213BF5B500CA55D2 /* PageViewControllerObject.swift in Sources */,
 				E669EDA8213A084900710F5D /* HUDObjectsViewController.swift in Sources */,
@@ -505,11 +592,15 @@
 				E67D46A621A57A350000E7FA /* Editable.swift in Sources */,
 				E676E26C213BFAA300CA55D2 /* TapGestureRecognizerObject.swift in Sources */,
 				E676E26B213BFAA300CA55D2 /* SplitViewControllerObject.swift in Sources */,
+				E63C897221B3578E0081B65A /* MoprotoViewType.swift in Sources */,
+				E63C897F21B360790081B65A /* MoprotoDataSourceType.swift in Sources */,
 				E676E26E213BFAA300CA55D2 /* ActivityIndicatorViewObject.swift in Sources */,
 				E676E251213BF5B500CA55D2 /* SegmentedControlObject.swift in Sources */,
 				E676E255213BF5B500CA55D2 /* TabBarControllerObject.swift in Sources */,
 				E676E27F213BFAA300CA55D2 /* TabBarObject.swift in Sources */,
+				E602EF1B21B21ECD00CB7BB2 /* UIControl+Extensions.swift in Sources */,
 				E676E280213BFAA300CA55D2 /* TableViewCellObject.swift in Sources */,
+				E63C896E21B3426F0081B65A /* MoprotoViewControllerType.swift in Sources */,
 				E676E254213BF5B500CA55D2 /* ImageViewObject.swift in Sources */,
 				E676E279213BFAA300CA55D2 /* ScrollViewObject.swift in Sources */,
 				E676E24B213BF5B500CA55D2 /* WebkitViewObject.swift in Sources */,
@@ -535,10 +626,11 @@
 				E676E268213BFAA300CA55D2 /* ScenekitViewObject.swift in Sources */,
 				E676E25E213BF5B500CA55D2 /* MetalkitViewObject.swift in Sources */,
 				E676E24C213BF5B500CA55D2 /* BarButtonItemFlexibleSpaceObject.swift in Sources */,
-				E6C37A02213B810D0039D774 /* MoprotoObjectType.swift in Sources */,
+				E6C37A02213B810D0039D774 /* MoprotoControlType.swift in Sources */,
 				E676E250213BF5B500CA55D2 /* NavigationItemObject.swift in Sources */,
 				E676E258213BF5B500CA55D2 /* BarButtonItemObject.swift in Sources */,
 				E676E277213BFAA300CA55D2 /* ProgressViewObject.swift in Sources */,
+				E63C897A21B35A9B0081B65A /* MoprotoUnusedType.swift in Sources */,
 				E676E273213BFAA300CA55D2 /* GlkitViewControllerObject.swift in Sources */,
 				E669ED92213A014E00710F5D /* AppDelegate.swift in Sources */,
 				E676E281213BFAA300CA55D2 /* TextViewObject.swift in Sources */,

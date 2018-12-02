@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HUDObjectsDataSource: NSObject, UITableViewDataSource {
+class HUDObjectsDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     let objects = ObjectFactory.build()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

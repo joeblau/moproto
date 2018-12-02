@@ -14,27 +14,29 @@ private let EDITOR_BUFFER: CGFloat = 12
 class AppWindow: UIWindow {
 
     fileprivate let hudObjects = HUDObjectsViewController()
-    fileprivate let dashboardWindow = UIWindow(frame: UIScreen.main.bounds)
+    fileprivate let hudWindow = UIWindow(frame: UIScreen.main.bounds)
+    
     internal var currentView: UIView? = nil
     internal var viewControllerTree: TreeNode<UIViewController>? = nil
     internal var currentNode: TreeNode<UIViewController>? = nil
+    internal let dataSources = DataSourcesFactory.build()
     private var liveEdit: LiveEditorView?
     
-    private var leadingConstraint: NSLayoutConstraint?
-    private var trailingConstraint: NSLayoutConstraint?
-    private var topConstraint: NSLayoutConstraint?
-    private var bottomConstraint: NSLayoutConstraint?
-    private var selectedEdge: UIRectEdge?
-    private var initialLocation: CGPoint = .zero
+//    private var leadingConstraint: NSLayoutConstraint?
+//    private var trailingConstraint: NSLayoutConstraint?
+//    private var topConstraint: NSLayoutConstraint?
+//    private var bottomConstraint: NSLayoutConstraint?
+//    private var selectedEdge: UIRectEdge?
+//    private var initialLocation: CGPoint = .zero
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         hudObjects.actionable = self
-        dashboardWindow.windowLevel = .statusBar
+        hudWindow.windowLevel = .statusBar
         let navController = UINavigationController(rootViewController: hudObjects)
         navController.navigationBar.barStyle = .blackTranslucent
         
-        dashboardWindow.rootViewController = navController
+        hudWindow.rootViewController = navController
         
 //        let pan = UIPanGestureRecognizer(target: self, action: #selector(didPan(recognizer:)))
 //        addGestureRecognizer(pan)
@@ -48,8 +50,8 @@ class AppWindow: UIWindow {
         
         rootViewController = InitialViewController()
 
-        let dropInteraction = UIDropInteraction(delegate: self)
-        addInteraction(dropInteraction)
+//        let dropInteraction = UIDropInteraction(delegate: self)
+//        addInteraction(dropInteraction)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -57,7 +59,7 @@ class AppWindow: UIWindow {
     }
 
     @objc func didEdgePan(recognizer: UIScreenEdgePanGestureRecognizer) {
-        dashboardWindow.makeKeyAndVisible()
+        hudWindow.makeKeyAndVisible()
     }
     
 //    @objc func didPan(recognizer: UIPanGestureRecognizer) {

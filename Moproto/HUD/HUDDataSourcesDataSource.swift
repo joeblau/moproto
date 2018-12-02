@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HUDDataSourcesDataSource: NSObject, UITableViewDataSource {
+class HUDDataSourcesDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     let dataSources = DataSourcesFactory.build()
     var actionable: HUDObjectsActionable?
 

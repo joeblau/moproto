@@ -14,6 +14,7 @@ class DeferredTableViewController: UITableViewController {
         super.init(nibName: nil, bundle: nil)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
         tableView.dataSource = dataSource
+        tableView.isScrollEnabled = false
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -23,8 +23,7 @@ class HUDObjectsViewController: UITableViewController {
         super.init(nibName: nil, bundle: nil)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
         tableView.dragInteractionEnabled = true
-        tableView.delegate = self
-
+        
         navigationItem.leftBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))]
         navigationItem.rightBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(play))]
     }
@@ -61,12 +60,13 @@ class HUDObjectsViewController: UITableViewController {
     private func updateDataSources() {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
+            tableView.delegate = hudObjectsDataSource
             tableView.dataSource = hudObjectsDataSource
             tableView.dragDelegate = hudObjectsDataSource
         case 1:
+            tableView.delegate = hudDataSourcesDataSource
             tableView.dataSource = hudDataSourcesDataSource
-            tableView.dragDelegate = hudDataSourcesDataSource
-            
+            tableView.dragDelegate = hudDataSourcesDataSource            
         default: break
         }
         tableView.reloadData()

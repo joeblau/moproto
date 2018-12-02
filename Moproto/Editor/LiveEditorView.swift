@@ -19,10 +19,10 @@ class LiveEditorView: UIView {
     init(editable: Editable) {
         parentEditable = editable
         super.init(frame: .zero)
-        backgroundColor = .clear
-        clipsToBounds = false
-        translatesAutoresizingMaskIntoConstraints = false
+        clipsToBounds = true
         contentMode = .redraw
+        backgroundColor = .clear
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -73,7 +73,5 @@ class LiveEditorView: UIView {
             renderVerticalHandles(rect)
         default: break
         }
-
     }
-
 }
