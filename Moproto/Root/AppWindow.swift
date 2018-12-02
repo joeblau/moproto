@@ -21,13 +21,6 @@ class AppWindow: UIWindow {
     internal var currentNode: TreeNode<UIViewController>? = nil
     internal let dataSources = DataSourcesFactory.build()
     private var liveEdit: LiveEditorView?
-    
-//    private var leadingConstraint: NSLayoutConstraint?
-//    private var trailingConstraint: NSLayoutConstraint?
-//    private var topConstraint: NSLayoutConstraint?
-//    private var bottomConstraint: NSLayoutConstraint?
-//    private var selectedEdge: UIRectEdge?
-//    private var initialLocation: CGPoint = .zero
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,13 +38,11 @@ class AppWindow: UIWindow {
         screenEdge.edges = [.bottom]
         addGestureRecognizer(screenEdge)
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(didTap(recognizer:)))
-        addGestureRecognizer(tap)
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(didTap(recognizer:)))
+//        addGestureRecognizer(tap)
         
         rootViewController = InitialViewController()
-
-//        let dropInteraction = UIDropInteraction(delegate: self)
-//        addInteraction(dropInteraction)
+        topViewController?.attachDropDelegates(delegate: self)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -94,21 +85,30 @@ class AppWindow: UIWindow {
         }
         guard let topView = currentView else { return }
         let location = recognizer.location(in: currentView)
-        for view in topView.subviews {
-            let adjustedLocation = topView.convert(location, to: view)
+        for currentView in topView.subviews {
+            let adjustedLocation = topView.convert(location, to: currentView)
             
-            switch view {
-            case is UIButton where view.bounds.contains(adjustedLocation),
-                is UISegmentedControl where view.bounds.contains(adjustedLocation),
-                is UISlider where view.bounds.contains(adjustedLocation),
-                is UIStepper where view.bounds.contains(adjustedLocation),
-                is UISwitch where view.bounds.contains(adjustedLocation):
-                view.liveEditView.isHidden.toggle()
+            switch currentView {
+            case is UIButton where currentView.bounds.contains(adjustedLocation),
+                is UISegmentedControl where currentView.bounds.contains(adjustedLocation),
+                is UISlider where currentView.bounds.contains(adjustedLocation),
+                is UIStepper where currentView.bounds.contains(adjustedLocation),
+                is UISwitch where currentView.bounds.contains(adjustedLocation):
+                currentView.liveEditView.isHidden.toggle()
                 return
             default: continue
             }
         }
     }
+    
+//    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+//        let hitView = super.hitTest(point, with: event)
+//
+//        if hitView!.isKind(of: UIControl.self ) {
+//            return nil
+//        }
+//        return hitView
+//    }
 }
 
 extension AppWindow: HUDObjectsActionable {

@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E602EF1B21B21ECD00CB7BB2 /* UIControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E602EF1A21B21ECD00CB7BB2 /* UIControl+Extensions.swift */; };
 		E607119B21A3879600C3BD2B /* WhiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607119A21A3879600C3BD2B /* WhiteViewController.swift */; };
+		E631FBFA21B36F1D00AA8FB8 /* AppWindow+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631FBF921B36F1D00AA8FB8 /* AppWindow+TopViewController.swift */; };
+		E631FBFC21B36F7D00AA8FB8 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631FBFB21B36F7D00AA8FB8 /* UIViewController+Extensions.swift */; };
 		E63C896E21B3426F0081B65A /* MoprotoViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C896D21B3426F0081B65A /* MoprotoViewControllerType.swift */; };
 		E63C897221B3578E0081B65A /* MoprotoViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C897121B3578E0081B65A /* MoprotoViewType.swift */; };
 		E63C897421B35A140081B65A /* MoprotoGestureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C897321B35A140081B65A /* MoprotoGestureType.swift */; };
@@ -104,7 +105,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E602EF1A21B21ECD00CB7BB2 /* UIControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extensions.swift"; sourceTree = "<group>"; };
 		E607119A21A3879600C3BD2B /* WhiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteViewController.swift; sourceTree = "<group>"; };
 		E628F073213BF588008F12E5 /* SearchBarandSearchDisplayControllerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarandSearchDisplayControllerObject.swift; sourceTree = "<group>"; };
 		E628F074213BF589008F12E5 /* ObjectObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectObject.swift; sourceTree = "<group>"; };
@@ -116,6 +116,8 @@
 		E628F07A213BF589008F12E5 /* CollectionViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewObject.swift; sourceTree = "<group>"; };
 		E628F07B213BF589008F12E5 /* DatePickerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerObject.swift; sourceTree = "<group>"; };
 		E628F07C213BF58A008F12E5 /* TapGestureRecognizerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureRecognizerObject.swift; sourceTree = "<group>"; };
+		E631FBF921B36F1D00AA8FB8 /* AppWindow+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AppWindow+TopViewController.swift"; path = "../../../moproto/Moproto/Root/AppWindow+TopViewController.swift"; sourceTree = "<group>"; };
+		E631FBFB21B36F7D00AA8FB8 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "../../../moproto/Moproto/Extensiosn/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		E63C896D21B3426F0081B65A /* MoprotoViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoViewControllerType.swift; sourceTree = "<group>"; };
 		E63C897121B3578E0081B65A /* MoprotoViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoViewType.swift; sourceTree = "<group>"; };
 		E63C897321B35A140081B65A /* MoprotoGestureType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoprotoGestureType.swift; sourceTree = "<group>"; };
@@ -249,7 +251,6 @@
 				E6C37A18213BF5200039D774 /* SwitchObject.swift */,
 				E628F077213BF589008F12E5 /* SliderObject.swift */,
 				E6C37A0A213BF51F0039D774 /* ActivityIndicatorViewObject.swift */,
-				E6C37A0B213BF51F0039D774 /* ProgressViewObject.swift */,
 				E676E241213BF5B400CA55D2 /* PageControlObject.swift */,
 				E676E23A213BF5B300CA55D2 /* StepperObject.swift */,
 				E628F07B213BF589008F12E5 /* DatePickerObject.swift */,
@@ -324,6 +325,7 @@
 				E6C37A06213BF51E0039D774 /* TextViewObject.swift */,
 				E6C37A15213BF5200039D774 /* ScrollViewObject.swift */,
 				E628F076213BF589008F12E5 /* VisualEffectViewwithBlurObject.swift */,
+				E6C37A0B213BF51F0039D774 /* ProgressViewObject.swift */,
 				E676E234213BF5B200CA55D2 /* VisualEffectViewswithBlurandVibrancyObject.swift */,
 				E6C37A1D213BF5210039D774 /* MapKitViewObject.swift */,
 				E676E245213BF5B400CA55D2 /* MetalkitViewObject.swift */,
@@ -386,6 +388,7 @@
 			children = (
 				E669EDA4213A058000710F5D /* AppWindow.swift */,
 				E6C37A03213B8C700039D774 /* AppWindow+UIDropInteractionDelegate.swift */,
+				E631FBF921B36F1D00AA8FB8 /* AppWindow+TopViewController.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -458,7 +461,7 @@
 			children = (
 				E6C379E6213A30910039D774 /* String+Extensions.swift */,
 				E67D46A721A57CE50000E7FA /* UIView+Extension.swift */,
-				E602EF1A21B21ECD00CB7BB2 /* UIControl+Extensions.swift */,
+				E631FBFB21B36F7D00AA8FB8 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensiosn;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				E6807ABB21AE0EF2006F8C31 /* UIInitialControl.swift in Sources */,
 				E676E27B213BFAA300CA55D2 /* SpritekitViewObject.swift in Sources */,
 				E676E275213BFAA300CA55D2 /* MapKitViewObject.swift in Sources */,
+				E631FBFC21B36F7D00AA8FB8 /* UIViewController+Extensions.swift in Sources */,
 				E676E259213BF5B500CA55D2 /* LabelObject.swift in Sources */,
 				E676E256213BF5B500CA55D2 /* PickerViewObject.swift in Sources */,
 				E676E25C213BF5B500CA55D2 /* CollectionViewCellObject.swift in Sources */,
@@ -598,7 +602,7 @@
 				E676E251213BF5B500CA55D2 /* SegmentedControlObject.swift in Sources */,
 				E676E255213BF5B500CA55D2 /* TabBarControllerObject.swift in Sources */,
 				E676E27F213BFAA300CA55D2 /* TabBarObject.swift in Sources */,
-				E602EF1B21B21ECD00CB7BB2 /* UIControl+Extensions.swift in Sources */,
+				E631FBFA21B36F1D00AA8FB8 /* AppWindow+TopViewController.swift in Sources */,
 				E676E280213BFAA300CA55D2 /* TableViewCellObject.swift in Sources */,
 				E63C896E21B3426F0081B65A /* MoprotoViewControllerType.swift in Sources */,
 				E676E254213BF5B500CA55D2 /* ImageViewObject.swift in Sources */,

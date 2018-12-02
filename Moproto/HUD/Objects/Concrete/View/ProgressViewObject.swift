@@ -5,5 +5,5 @@ struct ProgressViewObject: HUDItem {
     var title: String = "progress_view_title".localize
     var description: String = "progress_view_description".localize
     var category: ObjectCategory = .view
-    var type: NSItemProviderWriting = MoprotoControlType(name: String(describing: UIProgressView.self))
+    var type: NSItemProviderWriting = MoprotoViewType(name: String(describing: UIProgressView.self))
 }

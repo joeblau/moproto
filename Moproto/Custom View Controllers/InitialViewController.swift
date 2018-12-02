@@ -42,10 +42,6 @@ class InitialViewController: UIViewController {
         view.addSubview(initialControl)
         initialControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         initialControl.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-
-        let lev = initialControl.liveEditView
-        let dropInteraction = UIDropInteraction(delegate: self)
-        lev.addInteraction(dropInteraction)
         
         view.addSubview(noProjectLabel)
         noProjectLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -88,16 +84,16 @@ class InitialViewController: UIViewController {
     }
 }
 
-extension InitialViewController: UIDropInteractionDelegate {
-    func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
-        return session.hasItemsConforming(toTypeIdentifiers: ["MoprotoViewControllerType"]) && session.items.count == 1
-    }
-    
-    func dropInteraction(_ interaction: UIDropInteraction, sessionDidUpdate session: UIDropSession) -> UIDropProposal {
-        return UIDropProposal(operation: .copy)
-    }
-    
-    func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
-        print("drop")
-    }
-}
+//extension InitialViewController: UIDropInteractionDelegate {
+//    func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
+//        return session.hasItemsConforming(toTypeIdentifiers: ["MoprotoViewControllerType"]) && session.items.count == 1
+//    }
+//
+//    func dropInteraction(_ interaction: UIDropInteraction, sessionDidUpdate session: UIDropSession) -> UIDropProposal {
+//        return UIDropProposal(operation: .copy)
+//    }
+//
+//    func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
+//        print("drop")
+//    }
+//}
