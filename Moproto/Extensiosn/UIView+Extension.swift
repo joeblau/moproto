@@ -8,8 +8,6 @@
 
 import UIKit
 
-private let EDITOR_BUFFER: CGFloat = 12
-
 extension UIView {
     var editable: Editable {
         switch self {
@@ -36,10 +34,10 @@ extension UIView {
         guard let existingLiveEditView = subviews.filter({ $0.isKind(of: LiveEditorView.self) }).first as? LiveEditorView else {
             let newLiveEditView = LiveEditorView(editable: self.editable)
             addSubview(newLiveEditView)
-            newLiveEditView.topAnchor.constraint(equalTo: topAnchor, constant: -EDITOR_BUFFER).isActive = true
-            newLiveEditView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: EDITOR_BUFFER).isActive = true
-            newLiveEditView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: -EDITOR_BUFFER).isActive = true
-            newLiveEditView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: EDITOR_BUFFER).isActive = true
+            newLiveEditView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+            newLiveEditView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+            newLiveEditView.widthAnchor.constraint(equalTo: widthAnchor, constant: Constants.EDITOR_BUFFER).isActive = true
+            newLiveEditView.heightAnchor.constraint(equalTo: heightAnchor, constant: Constants.EDITOR_BUFFER).isActive = true
             newLiveEditView.isHidden = true
             return newLiveEditView
         }
@@ -72,4 +70,3 @@ extension UIView {
         layer.sublayers?.filter({ $0.isKind(of: HorizontalGuideShapeLayer.self) }).first?.removeFromSuperlayer()
     }
 }
-

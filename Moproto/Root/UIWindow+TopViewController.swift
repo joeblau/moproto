@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension AppWindow {
+extension UIWindow {
     var topViewController: UIViewController? {
         switch rootViewController {
         case is InitialViewController: return rootViewController

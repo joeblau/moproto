@@ -16,6 +16,7 @@ class UIInitialControl: UIControl {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .center
         imageView.tintColor = .lightGray
         addSubview(imageView)
     }
@@ -30,12 +31,13 @@ class UIInitialControl: UIControl {
         imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         imageView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
-        widthAnchor.constraint(equalToConstant: 32.0).isActive = true
-        heightAnchor.constraint(equalToConstant: 32.0).isActive = true
+        widthAnchor.constraint(equalToConstant: Constants.INITIAL_CONTROL_WIDTH_HEIGHT).isActive = true
+        heightAnchor.constraint(equalToConstant: Constants.INITIAL_CONTROL_WIDTH_HEIGHT).isActive = true
     }
     
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: 32, height: 32)
+        return CGSize(width: Constants.INITIAL_CONTROL_WIDTH_HEIGHT,
+                      height: Constants.INITIAL_CONTROL_WIDTH_HEIGHT)
     }
 
 }

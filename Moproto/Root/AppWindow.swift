@@ -9,12 +9,13 @@
 import UIKit
 import MobileCoreServices
 
-private let EDITOR_BUFFER: CGFloat = 12
-private let SNAP_PIXEL_BUFFER: CGFloat = 6
+
 class AppWindow: UIWindow {
 
+ private let touchVisualizer = TouchVisualizer()
+    
     fileprivate let hudObjects = HUDObjectsViewController()
-    fileprivate let hudWindow = UIWindow(frame: UIScreen.main.bounds)
+    fileprivate let hudWindow = HUDWindow(frame: UIScreen.main.bounds)
     
     internal var viewControllerTree: TreeNode<UIViewController>? = nil
     internal var currentNode: TreeNode<UIViewController>? = nil
@@ -57,7 +58,7 @@ class AppWindow: UIWindow {
         guard let centerX = activeViewConstraints.filter({ $0.firstAttribute == .centerX }).first,
             let centerY = activeViewConstraints.filter({ $0.firstAttribute == .centerY }).first else { return }
         
-        if (abs(location.x-topView.center.x) <= SNAP_PIXEL_BUFFER) {
+        if (abs(location.x-topView.center.x) <= Constants.SNAP_PIXEL_BUFFER) {
             centerX.constant = topView.center.x
             showVerticalCenterGuide()
         } else {
@@ -65,7 +66,7 @@ class AppWindow: UIWindow {
             removeVerticalCenterGuide()
         }
         
-        if (abs(location.y-topView.center.y) < SNAP_PIXEL_BUFFER) {
+        if (abs(location.y-topView.center.y) <= Constants.SNAP_PIXEL_BUFFER) {
             centerY.constant = topView.center.y
             showHorizontalCenterGuide()
         } else {
@@ -120,5 +121,34 @@ class AppWindow: UIWindow {
     private func removeAllGuides() {
         removeVerticalCenterGuide()
         removeHorizontalCenterGuide()
+    }
+    
+    // MARK: - Handle Events
+    
+    public override func sendEvent(_ event: UIEvent) {
+        super.sendEvent(event)
+        guard let touches = event.allTouches else {
+            return
+        }
+        
+        for touch in touches {
+            handleTouchVisualization(touch: touch)
+        }
+    }
+    
+    private func handleTouchVisualization(touch: UITouch) {
+        guard let rootView = topViewController?.view else {
+            return
+        }
+        switch touch.phase {
+        case .began:
+            touchVisualizer.createTouchVisualization(rootView: rootView, touch: touch, touchColor: .red)
+        case .moved:
+            touchVisualizer.moveTouchVisualization(rootView: rootView, touch: touch)
+        case .stationary:
+            break
+        case .ended, .cancelled:
+            touchVisualizer.removeTouchVisualization(touch: touch)
+        }
     }
 }

@@ -8,10 +8,6 @@
 
 import UIKit
 
-private let EDITOR_BUFFER: CGFloat = 12
-
-
-//extension AppWindow {
 extension AppWindow : UIDropInteractionDelegate {
     
     func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
