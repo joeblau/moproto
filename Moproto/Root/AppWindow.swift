@@ -20,7 +20,6 @@ class AppWindow: UIWindow {
     internal var viewControllerTree: TreeNode<UIViewController>? = nil
     internal var currentNode: TreeNode<UIViewController>? = nil
     internal let dataSources = DataSourcesFactory.build()
-    private var liveEdit: LiveEditorView?
     internal var activeView: UIView? = nil
     private var pan: UIPanGestureRecognizer!
     
@@ -31,13 +30,7 @@ class AppWindow: UIWindow {
         navController.navigationBar.barStyle = .blackTranslucent
         
         hudWindow.rootViewController = navController
-        
         pan = UIPanGestureRecognizer(target: self, action: #selector(didPan(recognizer:)))
-        
-        let screenEdge = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(didEdgePan(recognizer:)))
-        screenEdge.edges = [.bottom]
-        addGestureRecognizer(screenEdge)
-        
         rootViewController = InitialViewController(dropDelegate: self)
         setGestureRecoginzersToTopView()
     }
@@ -111,11 +104,16 @@ class AppWindow: UIWindow {
         }
     }
     
+    
+    
     internal func setGestureRecoginzersToTopView() {
         guard let topView = topViewController?.view else { return }
         activeView = topView
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTap(recognizer:)))
         topViewController?.view.addGestureRecognizer(tap)
+        let screenEdge =  UIScreenEdgePanGestureRecognizer(target: self, action: #selector(didEdgePan(recognizer:)))
+        screenEdge.edges = [.bottom]
+        topViewController?.view.addGestureRecognizer(screenEdge)
     }
     
     private func removeAllGuides() {

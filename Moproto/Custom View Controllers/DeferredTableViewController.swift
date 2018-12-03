@@ -9,12 +9,11 @@
 import UIKit
 
 class DeferredTableViewController: UITableViewController {
-
+    
     init(dataSource: UITableViewDataSource) {
         super.init(nibName: nil, bundle: nil)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
         tableView.dataSource = dataSource
-        tableView.isScrollEnabled = false
     }
     
     required init?(coder aDecoder: NSCoder) {
